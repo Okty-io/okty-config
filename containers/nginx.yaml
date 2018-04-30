@@ -13,7 +13,7 @@ ports:
   fields:
     "80": "Port web local"
   defaults:
-    "80: "8080"
+    "80": "8080"
  
 volumes:
   fields:
