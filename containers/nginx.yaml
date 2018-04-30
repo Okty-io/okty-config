@@ -1,4 +1,5 @@
 name: "Nginx"
+image: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
 version: 1.13
 image: nginx
 
