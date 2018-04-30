@@ -1,0 +1,16 @@
+name: "Apache"
+image: "https://cdn.worldvectorlogo.com/logos/apache-13.svg"
+version: 7.2-fpm
+image: php
+
+environments:
+
+ports:
+ 
+volumes:
+  fields:
+    "/var/www/html": "Web Folder (Same as web server folder)"
+  defaults:
+    "/var/www/html": "./"
+
+extensions:
