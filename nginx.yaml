@@ -1,0 +1,22 @@
+name: "Nginx"
+version: 1.13
+image: nginx
+
+environments:
+  fields:
+    NGINX_HOST: "Nom de domaine"
+    NGINX_HOST: "Nom de domaine" 
+  defaults:
+    NGINX_HOST: "127.0.0.1"
+
+ports: 
+  fields:
+    "80": "Port web local"
+  defaults:
+    "80: "8080"
+ 
+volumes:
+  fields:
+    "/var/www/html": "Web Folder"
+  defaults:
+    "/var/www/html": "./"
