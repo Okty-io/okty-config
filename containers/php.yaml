@@ -1,4 +1,5 @@
 name: "PHP FPM"
+image: "https://cdn.worldvectorlogo.com/logos/php-1.svg"
 version: 7.2-fpm
 image: php
 
