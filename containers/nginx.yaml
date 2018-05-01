@@ -1,23 +1,62 @@
-name: "Nginx"
-image: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
-version: 1.13
 image: nginx
+name: Nginx
+version: 1.13
+config: 
+  general: 
+    label: General
+    fields: 
+      name: 
+        label: "Container name"
+        type: input
+        source: nginx
+        destination: docker-compose
+        value: container_name
+      port: 
+        label: "Port used on the host machine"
+        type: port
+        source: "80"
+        destination: docker-compose
+        value: ports
+      application:
+        label: "Local path to the application"
+        type: input
+        source: "/var/www/html"
+        destination: docker-compose
+        value: volumes
+  nginx: 
+    label: Nginx
+    fields: 
+      label: "Max upload size (Mb)"
+      type: input
+      source: nginx-config
+      destination: file
+      value: max_upload_size
+files: 
+  nginx-server:
+    path: '/tmp/nginx.conf'
+    content: |
+      server {
+        listen 80 default;
+      
+        client_max_body_size {{ max_upload_size | 108M }};
+      
+        access_log /var/log/nginx/application.access.log;
+      
+        root /application/public;
+        index index.php;
+      
+        if (!-e $request_filename) {
+            rewrite ^.*$ /index.php last;
+        }
+      
+        location ~ \.php$ {
+            fastcgi_pass php-fpm:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param PHP_VALUE "error_log=/var/log/nginx/application_php_errors.log";
+            fastcgi_buffers 16 16k;
+            fastcgi_buffer_size 32k;
+            include fastcgi_params;
+        }
+      }
 
-environments:
-  fields:
-    NGINX_HOST: "Nom de domaine"
-    NGINX_HOST: "Nom de domaine" 
-  defaults:
-    NGINX_HOST: "127.0.0.1"
-
-ports: 
-  fields:
-    80: "Port web local"
-  defaults:
-    80: "8080"
- 
-volumes:
-  fields:
-    "/var/www/html": "Web Folder"
-  defaults:
-    "/var/www/html": "./"
