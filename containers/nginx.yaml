@@ -3,36 +3,42 @@ version: 1.13
 image: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
 docker: nginx
 config: 
-  - id: general
+  - 
+    id: general
     label: General
     fields: 
-        - id: name 
-          label: "Container name"
-          type: input
-          source: nginx
-          destination: docker-compose
-          value: container_name
-        - id: port 
-          label: "Port used on the host machine"
-          type: port
-          source: "80"
-          destination: docker-compose
-          value: ports
-        - id: application
-          label: "Local path to the application"
-          type: input
-          source: "/var/www/html"
-          destination: docker-compose
-          value: volumes
-    -   id: nginx 
-        label: Nginx
-        fields:
-          - id: max_upload
-            label: "Max upload size (Mb)"
-            type: input
-            source: nginx-config
-            destination: file
-            value: max_upload_size
+      - 
+        id: name 
+        label: "Container name"
+        type: input
+        source: nginx
+        destination: docker-compose
+        value: container_name
+      - 
+        id: port 
+        label: "Port used on the host machine"
+        type: port
+        source: "80"
+        destination: docker-compose
+        value: ports
+      - 
+        id: application
+        label: "Local path to the application"
+        type: input
+        source: "/var/www/html"
+        destination: docker-compose
+        value: volumes
+  -   
+    id: nginx 
+    label: Nginx
+    fields:
+      - 
+        id: max_upload
+        label: "Max upload size (Mb)"
+        type: input
+        source: nginx-config
+        destination: file
+        value: max_upload_size
 files: 
   nginx-server:
     path: '/tmp/nginx.conf'
