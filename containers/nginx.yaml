@@ -1,6 +1,7 @@
-image: nginx
 name: Nginx
 version: 1.13
+image: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
+docker: nginx
 config: 
   general: 
     label: General
