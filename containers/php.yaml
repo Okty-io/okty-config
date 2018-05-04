@@ -10,7 +10,9 @@ ports:
 volumes:
   fields:
     "/var/www/html": "Web Folder (Same as web server folder)"
+    "container_name": "Container name"
   defaults:
-    "/var/www/html": "./"
+    "/var/www/html": "./"s
+    "container_name": "octy_php"
 
 extensions:
