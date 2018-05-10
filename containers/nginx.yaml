@@ -17,7 +17,7 @@ config:
       - 
         id: port 
         label: "Port used on the host machine"
-        type: port
+        type: input
         base: "80"
         destination: ports
         value: "80"
