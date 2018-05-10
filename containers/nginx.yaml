@@ -25,7 +25,7 @@ config:
         id: application
         label: "Local path to the application"
         type: input
-        base: "/var/www/html"
+        base: "/usr/share/nginx/html"
         destination: volumes
         value: "./"
   -   
