@@ -1,7 +1,7 @@
-name: Nginx
-version: 1.13
+name: "Nginx 1.14"
 image: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
-docker: nginx
+docker: okty/nginx
+version: latest
 config: 
   - 
     id: general
@@ -11,23 +11,23 @@ config:
         id: name 
         label: "Container name"
         type: input
-        source: nginx
+        base: container_name
         destination: docker-compose
-        value: container_name
+        value: nginx
       - 
         id: port 
         label: "Port used on the host machine"
         type: port
-        source: "80"
-        destination: docker-compose
-        value: ports
+        base: "80"
+        destination: ports
+        value: "80"
       - 
         id: application
         label: "Local path to the application"
         type: input
-        source: "/var/www/html"
-        destination: docker-compose
-        value: volumes
+        base: "/var/www/html"
+        destination: volumes
+        value: "./"
   -   
     id: nginx 
     label: Nginx
@@ -36,35 +36,8 @@ config:
         id: max_upload
         label: "Max upload size (Mb)"
         type: input
-        source: nginx-config
-        destination: file
-        value: max_upload_size
-files: 
-  nginx-server:
-    path: '/tmp/nginx.conf'
-    content: |
-      server {
-        listen 80 default;
-      
-        client_max_body_size {{ max_upload_size | 108M }};
-      
-        access_log /var/log/nginx/application.access.log;
-      
-        root /application/public;
-        index index.php;
-      
-        if (!-e $request_filename) {
-            rewrite ^.*$ /index.php last;
-        }
-      
-        location ~ \.php$ {
-            fastcgi_pass php-fpm:9000;
-            fastcgi_index index.php;
-            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-            fastcgi_param PHP_VALUE "error_log=/var/log/nginx/application_php_errors.log";
-            fastcgi_buffers 16 16k;
-            fastcgi_buffer_size 32k;
-            include fastcgi_params;
-        }
-      }
+        base: MAX_UPLOAD_SIZE
+        destination: environment
+        value: "128M"
 
+        
