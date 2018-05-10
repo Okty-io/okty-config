@@ -1,0 +1,59 @@
+name: "Mysql"
+image: "https://cdn.worldvectorlogo.com/logos/mysql.svg"
+docker: okty/mysql
+version: latest
+config: 
+  - 
+    id: general
+    label: General
+    fields: 
+      - 
+        id: name 
+        label: "Container name"
+        type: input
+        base: container_name
+        destination: docker-compose
+        value: mysql
+      - 
+        id: port 
+        label: "Mysql port used on the host machine"
+        type: port
+        base: "3306"
+        destination: ports
+        value: "3306"
+      - 
+        id: application
+        label: "Local path to database files"
+        comment: "Leave empty if not persistent data"
+        type: input
+        base: "/var/lib/mysql"
+        destination: volumes
+        value: "./docker/database"
+  -   
+    id: connection
+    label: Connection
+    fields:
+      - 
+        id: database_name
+        label: "Database Name"
+        type: input
+        base: MYSQL_DATABASE
+        destination: environment
+        value: "docker"
+      -
+        id: database_user
+        label: 'Mysql User'
+        type: input
+        base: MYSQL_USER
+        destination: environment
+        value: "user"
+      -
+        id: database_password
+        label: 'Mysql Password'
+        type: input
+        base: MYSQL_PASSWORD
+        destination: environment
+        value: "password"
+        
+
+        
