@@ -54,6 +54,11 @@ config:
         base: MYSQL_PASSWORD
         destination: environment
         value: "password"
-        
+      -
+        id: database_root
+        type: hidden
+        base: MYSQL_RANDOM_ROOT_PASSWORD
+        destination: environment
+        value: "true"
 
         
