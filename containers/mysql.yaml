@@ -1,7 +1,7 @@
 name: "Mysql"
 image: "https://cdn.worldvectorlogo.com/logos/mysql.svg"
-docker: okty/mysql
-version: latest
+docker: mysql
+version: 5.7
 config: 
   - 
     id: general
