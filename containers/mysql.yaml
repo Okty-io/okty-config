@@ -9,10 +9,10 @@ config:
     fields: 
       - 
         id: name 
-        label: "Container name"
+        label: "Container ID"
         type: input
-        base: container_name
-        destination: docker-compose
+        base: container_id
+        destination: id
         value: mysql
       - 
         id: port 
