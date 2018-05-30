@@ -43,4 +43,6 @@ config:
         id: php
         label: "PHP Container"
         type: select-container
+        base: PHP_CONTAINER_ID
         destination: environment
+        value: ""
