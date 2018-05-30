@@ -17,16 +17,15 @@ config:
       - 
         id: port 
         label: "Mysql port used on the host machine"
-        type: port
+        type: input
         base: "3306"
         destination: ports
         value: "3306"
       - 
         id: application
-        label: "Local path to database files"
-        comment: "Leave empty if not persistent data"
+        label: "Relative path of database folder"
         type: input
-        base: "/var/lib/mysql"
+        base: "./docker/database"
         destination: volumes
         value: "./docker/database"
   -   

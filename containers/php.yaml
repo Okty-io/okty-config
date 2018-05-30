@@ -16,9 +16,9 @@ config:
         value: nginx
       - 
         id: application
-        label: "Application's local path"
+        label: "Local path of the application"
         type: input
-        base: "/usr/share/nginx/html"
+        base: "./"
         destination: volumes
         value: "./"
   -   
@@ -28,11 +28,15 @@ config:
       - 
         id: extensions
         label: "PHP Extensions"
-        type: selectize
+        type: selectize 
         source: 
-          "bc-math": "BC Math"
-          "ctype" : "ctype"
-          "curl" : "curl"
+          "bcmath": "BC Math"
+          "pdo_mysql" : "PDO Mysql"
+          "gd" : "GD"
+          "intl" : "Intl"
+          "xsl" : "XSL"
+          "zip" : "ZIP"
+          "soap" : "SOAP"
         base: PHP_EXTENSIONS
         destination: environment
         value: ""
