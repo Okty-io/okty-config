@@ -13,7 +13,7 @@ config:
         type: input
         base: container_id
         destination: id
-        value: nginx
+        value: php
       - 
         id: application
         label: "Local path of the application"

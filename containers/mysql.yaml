@@ -23,9 +23,9 @@ config:
         value: "3306"
       - 
         id: application
-        label: "Relative path of database folder"
+        label: "Local path of database folder"
         type: input
-        base: "./docker/database"
+        base: "/var/lib/mysql"
         destination: volumes
         value: "./docker/database"
   -   
