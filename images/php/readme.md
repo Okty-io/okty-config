@@ -6,20 +6,27 @@ docker push okty/php
 ## Available
 
 - bcmath
+- pdo_mysql
+- gd 
+- intl
+- xsl
+- zip
+- soap
+
+## Todo
+- curl (libcurl)
+- mcrypt
 
 ## Not implemented :
-- bcmath
 - bz2
 - calendar
 - dba
 - enchant
 - exif
-- gd
 - gettext
 - gmp
 - imap
 - interbase
-- intl
 - ldap
 - mysqli
 - oci8
@@ -28,7 +35,6 @@ docker push okty/php
 - pcntl
 - pdo_dblib
 - pdo_firebird
-- pdo_mysql
 - pdo_oci
 - pdo_odbc
 - pdo_pgsql
@@ -37,7 +43,6 @@ docker push okty/php
 - recode
 - shmop
 - snmp
-- soap
 - sockets
 - sysvmsg
 - sysvsem
@@ -45,9 +50,7 @@ docker push okty/php
 - tidy
 - wddx
 - xmlrpc
-- xsl
 - zend_test
-- zip
 
 ## Default : 
 - Core
