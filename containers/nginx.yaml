@@ -23,7 +23,7 @@ config:
         value: "80"
       - 
         id: application
-        label: "Local path to the application"
+        label: "Local path of the application"
         type: input
         base: "/usr/share/nginx/html"
         destination: volumes
@@ -39,5 +39,8 @@ config:
         base: MAX_UPLOAD_SIZE
         destination: environment
         value: "128M"
-
-        
+      -
+        id: php
+        label: "PHP Container"
+        type: select-container
+        destination: environment
