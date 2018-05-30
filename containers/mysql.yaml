@@ -58,6 +58,6 @@ config:
         type: hidden
         base: MYSQL_RANDOM_ROOT_PASSWORD
         destination: environment
-        value: "true"
+        value: "yes"
 
         
