@@ -13,11 +13,9 @@ then
 	php_container_link="location ~ \.php$ {\n\
         fastcgi_pass   ${PHP_CONTAINER_ID}:9000;\n\
         fastcgi_index  index.php;\n\
-        fastcgi_param  SCRIPT_FILENAME  \/scripts\$fastcgi_script_name;\n\
+        fastcgi_param  SCRIPT_FILENAME  \$document_root\$fastcgi_script_name;\n\
         include        fastcgi_params;\n\
     }";
-
-	echo "OUTPUT : ${php_container_link}"
 
     sed -i "s/#PHP_CONTAINER_LINK#/${php_container_link}/g" /etc/nginx/conf.d/default.conf
 fi
