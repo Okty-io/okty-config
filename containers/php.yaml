@@ -28,7 +28,7 @@ config:
       - 
         id: extensions
         label: "PHP Extensions"
-        type: select
+        type: selectize
         source: 
           "bc-math": "BC Math"
           "ctype" : "ctype"
