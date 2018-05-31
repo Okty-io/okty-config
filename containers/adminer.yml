@@ -1,5 +1,5 @@
 name: "Adminer"
-image: ""
+image: "http://oktyiopcgt.cluster021.hosting.ovh.net/Adminer-A.svg"
 docker: adminer
 version: latest
 config: 
