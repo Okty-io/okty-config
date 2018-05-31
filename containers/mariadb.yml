@@ -13,7 +13,7 @@ config:
         type: input
         base: container_id
         destination: id
-        value: mysql
+        value: mariadb
       - 
         id: port 
         label: "Mysql port used on the host machine"
