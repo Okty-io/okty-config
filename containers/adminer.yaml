@@ -1,6 +1,6 @@
 name: "Adminer"
 image: ""
-docker: okty/nginx
+docker: adminer
 version: latest
 config: 
   - 
