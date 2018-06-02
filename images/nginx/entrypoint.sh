@@ -20,4 +20,13 @@ then
     sed -i "s/#PHP_CONTAINER_LINK#/${php_container_link}/g" /etc/nginx/conf.d/default.conf
 fi
 
+root_folder="\/usr\/share\/nginx\/html"
+if [ ! -z "$INDEX_SUBFOLDER" ]
+then
+    root_folder="${root_folder}\/${INDEX_SUBFOLDER}"
+fi
+
+echo "Set root folder"
+sed -i "s/#ROOT_FOLDER#/${root_folder}/g" /etc/nginx/conf.d/default.conf
+
 exec /usr/sbin/nginx -g 'daemon off;'

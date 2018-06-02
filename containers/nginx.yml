@@ -1,7 +1,7 @@
 name: "Nginx 1.14"
 image: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
 docker: okty/nginx
-version: latest
+version: "1.14"
 config: 
   - 
     id: general
