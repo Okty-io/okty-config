@@ -14,6 +14,8 @@ config:
         base: container_id
         destination: id
         value: nginx
+        validators:
+            required: true
       - 
         id: port 
         label: "Port used on the host machine"
@@ -21,6 +23,9 @@ config:
         base: "80"
         destination: ports
         value: "80"
+        validators:
+            required: true
+            numbers: { min: 0, max: 65535 }
       - 
         id: application
         label: "Local path of the application"
@@ -28,6 +33,8 @@ config:
         base: "/usr/share/nginx/html"
         destination: volumes
         value: "./"
+        validators:
+            required: true
   -   
     id: nginx 
     label: Nginx
@@ -39,6 +46,9 @@ config:
         base: MAX_UPLOAD_SIZE
         destination: environment
         value: "128M"
+        validators:
+            required: true
+            regex: "%d(M|G)"
       -
         id: php
         label: "PHP Container"
@@ -46,6 +56,8 @@ config:
         base: PHP_CONTAINER_ID
         destination: environment
         value: ""
+        validators:
+            required: true
       -
         id: index
         label: "Subfolder of the index file"
@@ -53,3 +65,4 @@ config:
         base: INDEX_SUBFOLDER
         destination: environment
         value: ""
+        
