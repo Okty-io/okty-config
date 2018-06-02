@@ -46,3 +46,10 @@ config:
         base: PHP_CONTAINER_ID
         destination: environment
         value: ""
+      -
+        id: index
+        label: "Subfolder of the index file"
+        type: input
+        base: INDEX_SUBFOLDER
+        destination: environment
+        value: ""
