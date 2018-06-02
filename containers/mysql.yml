@@ -14,6 +14,8 @@ config:
         base: container_id
         destination: id
         value: mysql
+        validators: 
+            required: true
       - 
         id: port 
         label: "Mysql port used on the host machine"
@@ -21,6 +23,8 @@ config:
         base: "3306"
         destination: ports
         value: "3306"
+        validators:
+            numbers: { min: 0, max: 65535 }
       - 
         id: application
         label: "Local path of database folder"
@@ -28,6 +32,8 @@ config:
         base: "/var/lib/mysql"
         destination: volumes
         value: "./docker/database"
+        validators:
+            required: true
   -   
     id: connection
     label: Connection
@@ -39,6 +45,8 @@ config:
         base: MYSQL_DATABASE
         destination: environment
         value: "docker"
+        validators:
+            required: true
       -
         id: database_user
         label: 'Mysql User'
@@ -46,6 +54,8 @@ config:
         base: MYSQL_USER
         destination: environment
         value: "user"
+        validators:
+            required: true
       -
         id: database_password
         label: 'Mysql Password'
@@ -53,11 +63,15 @@ config:
         base: MYSQL_PASSWORD
         destination: environment
         value: "password"
+        validators:
+            required: true
       -
         id: database_root
         type: hidden
         base: MYSQL_RANDOM_ROOT_PASSWORD
         destination: environment
         value: "yes"
+        validators:
+            required: true
 
         

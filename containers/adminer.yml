@@ -14,6 +14,8 @@ config:
         base: container_id
         destination: id
         value: adminer
+        validators:
+            required: true
       - 
         id: port 
         label: "Port used on the host machine"
@@ -21,3 +23,6 @@ config:
         base: "8080"
         destination: ports
         value: "8081"
+        validators:
+            required: true
+            numbers: { min: 0, max: 65535 }
