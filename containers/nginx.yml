@@ -48,7 +48,7 @@ config:
         value: "128M"
         validators:
             required: true
-            regex: "%d(M|G)"
+            regex: "^[0-9]+(M|G)$"
       -
         id: php
         label: "PHP Container"
@@ -65,4 +65,3 @@ config:
         base: INDEX_SUBFOLDER
         destination: environment
         value: ""
-        
