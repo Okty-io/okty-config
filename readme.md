@@ -75,6 +75,7 @@ If this field is missing Okty won't be able to work properly.
   validators:
     required: true
 ```
+(This is a default structure for your fields) 
 
 Okty may handle three types of configuration for your container :
 - Volumes
@@ -86,9 +87,12 @@ For each type, those three fields are required :
 id: Unique_Id
 label: "Input label"
 destination: volumes|ports|environment
+type: input|select-container|multi-select|select
+validators: []
 ```  
-  
-#### Volumes
+#### Destination  
+The first step to build your configuration file is to define the data you need
+##### Volumes
 This configuration allows you to bind a folder from the host machine to the inside of the container.
 If you need to bind a volume, you have to add these fields :  
 ```yml
@@ -97,7 +101,7 @@ base: "/usr/share/nginx/html" # The path of the folder inside the container
 value: "./" # The default path on the host
 ```
 
-#### Ports
+##### Ports
 This configuration allows you to bind a port from the host machine to the container.
 If you need to bind a port, you have to add these fields :  
 ```yml
@@ -106,7 +110,7 @@ base: "80" # Port of the container to bind
 value: "8080" # Port on the host machine
 ```
 
-#### Environment
+##### Environment
 This type of configuration allows you to add a env variable in the container.  
 If you need to add a variable, you have to had these fields :
 ```yml
@@ -118,6 +122,49 @@ value: "128M" # Default value
 This is the main configuration used by Okty.  
 If you need to customize an existing image, you should create a new one which extends the image you need and set inside configuration from an entrypoint script.  
 You may check [this folder](https://github.com/lbassin/okty-config/tree/master/images/nginx), this is done through two files : Dockerfile and entrypoint.sh
+
+#### Type
+Once you know which data will be needed you may define how user should fill them.  
+There is four type of input available  
+
+##### Input
+This one allows user to write data into a basic text field.
+You have to add this line to your field declaration.  
+The input data will replace the default value.
+```yml
+type: input
+```
+
+##### Select Container
+This one allows user to select an existing container from his project.
+You have to add this line to your field declaration.
+Output will be the unique container_id of the selected one.
+```yml
+type: select-container
+```  
+
+##### Multi Select
+This input allows the user to select multiple value from a defined source.  
+You have to add these lines to your field declaration.  
+Output will be a string of all values separated by a ";"
+```yml
+type: multi-select 
+source: 
+  "value1": "Label 01"
+  "value2": "Label 02"
+  "value3": "Label 02"
+```
+
+##### Simple Select
+This input works exactly like the multi-select but user may only choose one value.  
+Output will be a string with the value of the selected item.
+```yml
+type: select 
+source: 
+  "value1": "Label 01"
+  "value2": "Label 02"
+  "value3": "Label 02"
+```
 
 #### Validators
 In order to make sure users provide functional data, you may add some validations on your fields.
