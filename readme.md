@@ -62,7 +62,62 @@ config:
 
 ### Fields 
 
-// TODO
+Before creating any configuration for your container, you have to had the container id field.  
+If this field is missing Okty won't be able to work properly.
+```yml
+- 
+  id: name 
+  label: "Container ID"
+  type: input
+  base: container_id
+  destination: id
+  value: php # Change this by a default value
+  validators:
+    required: true
+```
+
+Okty may handle three types of configuration for your container :
+- Volumes
+- Ports
+- Environment
+
+For each type, those three fields are required :
+```yml
+id: Unique_Id
+label: "Input label"
+destination: volumes|ports|environment
+```  
+  
+#### Volumes
+This configuration allows you to bind a folder from the host machine to the inside of the container.
+If you need to bind a volume, you have to add these fields :  
+```yml
+destination: volumes
+base: "/usr/share/nginx/html" # The path of the folder inside the container
+value: "./" # The default path on the host
+```
+
+#### Ports
+This configuration allows you to bind a port from the host machine to the container.
+If you need to bind a port, you have to add these fields :  
+```yml
+destination: ports
+base: "80" # Port of the container to bind
+value: "8080" # Port on the host machine
+```
+
+#### Environment
+This type of configuration allows you to add a env variable in the container.  
+If you need to add a variable, you have to had these fields :
+```yml
+destination: environment
+base: VAR_NAME # Variable name
+value: "128M" # Default value 
+```
+
+This is the main configuration used by Okty.  
+If you need to customize an existing image, you should create a new one which extends the image you need and set inside configuration from an entrypoint script.  
+You may check [this folder](https://github.com/lbassin/okty-config/tree/master/images/nginx), this is done through two files : Dockerfile and entrypoint.sh
 
 ## Contribute
 
