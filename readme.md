@@ -158,6 +158,9 @@ source:
   "value3": "Label 02"
 ```
 
+In order the exploit those data, you have to split them and iterate over the splited values in the entrypoint script. 
+There is an example [right there](https://github.com/lbassin/okty-config/blob/master/images/php/entrypoint.sh#L8)  
+  
 ##### 4. Simple Select
 This input works exactly like the multi-select but user may only choose one value.  
 Output will be a string with the value of the selected item.
