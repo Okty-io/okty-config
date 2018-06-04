@@ -93,7 +93,7 @@ validators: []
 
 #### Destination  
 The first step to build your configuration file is to define the data you need
-##### Volumes
+##### 1. Volumes
 This configuration allows you to bind a folder from the host machine to the inside of the container.
 If you need to bind a volume, you have to add these fields :  
 ```yml
@@ -102,7 +102,7 @@ base: "/usr/share/nginx/html" # The path of the folder inside the container
 value: "./" # The default path on the host
 ```
 
-##### Ports
+##### 2. Ports
 This configuration allows you to bind a port from the host machine to the container.
 If you need to bind a port, you have to add these fields :  
 ```yml
@@ -111,7 +111,7 @@ base: "80" # Port of the container to bind
 value: "8080" # Port on the host machine
 ```
 
-##### Environment
+##### 3. Environment
 This type of configuration allows you to add a env variable in the container.  
 If you need to add a variable, you have to had these fields :
 ```yml
@@ -130,7 +130,7 @@ You may check [this folder](https://github.com/lbassin/okty-config/tree/master/i
 Once you know which data will be needed you may define how user should fill them.  
 There is four type of input available  
 
-##### Input
+##### 1. Input
 This one allows user to write data into a basic text field.
 You have to add this line to your field declaration.  
 The input data will replace the default value.
@@ -138,7 +138,7 @@ The input data will replace the default value.
 type: input
 ```
 
-##### Select Container
+##### 2. Select Container
 This one allows user to select an existing container from his project.
 You have to add this line to your field declaration.
 Output will be the unique container_id of the selected one.
@@ -146,7 +146,7 @@ Output will be the unique container_id of the selected one.
 type: select-container
 ```  
 
-##### Multi Select
+##### 3. Multi Select
 This input allows the user to select multiple value from a defined source.  
 You have to add these lines to your field declaration.  
 Output will be a string of all values separated by a ";"
@@ -158,7 +158,7 @@ source:
   "value3": "Label 02"
 ```
 
-##### Simple Select
+##### 4. Simple Select
 This input works exactly like the multi-select but user may only choose one value.  
 Output will be a string with the value of the selected item.
 ```yml
