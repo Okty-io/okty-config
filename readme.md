@@ -119,6 +119,16 @@ This is the main configuration used by Okty.
 If you need to customize an existing image, you should create a new one which extends the image you need and set inside configuration from an entrypoint script.  
 You may check [this folder](https://github.com/lbassin/okty-config/tree/master/images/nginx), this is done through two files : Dockerfile and entrypoint.sh
 
+#### Validators
+In order to make sure users provide functional data, you may add some validations on your fields.
+There are currently three types of validators : 
+```yml
+validators:
+    required: true
+    numbers: { min: 0, max: 65535 }
+    regex: "^[a-z]$"
+```  
+  
 ## Contribute
 
 Okty needs help to stay up to date and improve his features.  
