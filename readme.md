@@ -89,7 +89,8 @@ label: "Input label"
 destination: volumes|ports|environment
 type: input|select-container|multi-select|select
 validators: []
-```  
+```
+
 #### Destination  
 The first step to build your configuration file is to define the data you need
 ##### Volumes
@@ -122,6 +123,8 @@ value: "128M" # Default value
 This is the main configuration used by Okty.  
 If you need to customize an existing image, you should create a new one which extends the image you need and set inside configuration from an entrypoint script.  
 You may check [this folder](https://github.com/lbassin/okty-config/tree/master/images/nginx), this is done through two files : Dockerfile and entrypoint.sh
+
+***
 
 #### Type
 Once you know which data will be needed you may define how user should fill them.  
@@ -165,6 +168,8 @@ source:
   "value2": "Label 02"
   "value3": "Label 02"
 ```
+
+***
 
 #### Validators
 In order to make sure users provide functional data, you may add some validations on your fields.
