@@ -158,7 +158,7 @@ source:
   "value3": "Label 02"
 ```
 
-In order the exploit those data, you have to split them and iterate over the splited values in the entrypoint script. 
+In order the exploit those data, you have to split the output string and iterate through each value in the entrypoint script.  
 There is an example [right there](https://github.com/lbassin/okty-config/blob/master/images/php/entrypoint.sh#L8)  
   
 ##### 4. Simple Select
