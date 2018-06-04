@@ -32,7 +32,7 @@ config:
       - 
         id: extensions
         label: "PHP Extensions"
-        type: selectize 
+        type: multi-select 
         source: 
           "bcmath": "BC Math"
           "pdo_mysql" : "PDO Mysql"
