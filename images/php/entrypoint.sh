@@ -3,7 +3,7 @@ set -e
 
 # Required by composer
 apt-get install -y zlib1g-dev;
-docker-php-ext zip;
+docker-php-ext-install zip;
 
 if [ ! -z "$PHP_EXTENSIONS" ]
 then
