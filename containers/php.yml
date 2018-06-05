@@ -39,7 +39,6 @@ config:
           "gd" : "GD"
           "intl" : "Intl"
           "xsl" : "XSL"
-          "zip" : "ZIP"
           "soap" : "SOAP"
         base: PHP_EXTENSIONS
         destination: environment
