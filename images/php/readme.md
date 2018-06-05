@@ -10,10 +10,9 @@ docker push okty/php
 - gd 
 - intl
 - xsl
-- zip
 - soap
 
-## Todo
+## Todo next
 - curl (libcurl)
 - mcrypt
 
@@ -53,6 +52,7 @@ docker push okty/php
 - zend_test
 
 ## Default : 
+- zip
 - Core
 - date
 - libxml
