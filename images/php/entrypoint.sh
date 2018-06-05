@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 
+# Required by composer
+apt-get install -y zlib1g-dev;
+docker-php-ext zip;
+
 if [ ! -z "$PHP_EXTENSIONS" ]
 then
 	apt-get update
@@ -22,10 +26,6 @@ then
 
 		if [ "$extension" = "xsl" ]; then
 			apt-get install -y libxslt-dev;
-		fi
-
-		if [ "$extension" = "zip" ]; then
-			apt-get install -y zlib1g-dev;
 		fi
 
 	    docker-php-ext-install ${extension};
