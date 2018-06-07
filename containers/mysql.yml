@@ -1,4 +1,4 @@
-name: "Mysql"
+name: "MySQL 5.7"
 image: "https://cdn.worldvectorlogo.com/logos/mysql.svg"
 docker: mysql
 version: 5.7

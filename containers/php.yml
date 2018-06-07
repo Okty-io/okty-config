@@ -1,4 +1,4 @@
-name: "PHP FPM"
+name: "PHP FPM 7.2"
 image: "https://cdn.worldvectorlogo.com/logos/php-1.svg"
 docker: okty/php
 version: "7.2"
