@@ -23,6 +23,7 @@ config:
         type: input
         base: "3306"
         destination: ports
+        value: "3306"
         validators:
             numbers: { min: 0, max: 65535 }
       - 
@@ -73,4 +74,4 @@ config:
         value: "yes"
         validators:
             required: true
-                    
+
