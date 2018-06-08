@@ -16,6 +16,7 @@ config:
         value: php
         validators:
           required: true
+          regex: "^[a-z]+$"
       - 
         id: application
         label: "Local path of the application"

@@ -16,6 +16,7 @@ config:
         value: mysql
         validators: 
             required: true
+            regex: "^[a-z]+$"
       - 
         id: port 
         label: "Mysql port used on the host machine"

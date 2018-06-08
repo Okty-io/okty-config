@@ -16,6 +16,7 @@ config:
         value: adminer
         validators:
             required: true
+            regex: "^[a-z]+$"
       - 
         id: port 
         label: "Port used on the host machine"
