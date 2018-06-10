@@ -46,7 +46,7 @@ config:
         type: input
         base: MAX_UPLOAD_SIZE
         destination: environment
-        value: "128M"
+        value: "2M"
         validators:
             required: true
             regex: "^[0-9]+(M|G)$"
