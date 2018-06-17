@@ -1,0 +1,43 @@
+name: "Symfony 4"
+image: "https://cdn.worldvectorlogo.com/logos/symfony.svg"
+containers:
+  - configPath: mysql
+    conainerId: mysql
+    output:
+      image: mysql:5.7
+      ports:
+      - 3306:3306
+      volumes:
+      - "./docker/database:/var/lib/mysql"
+      environment:
+      - MYSQL_DATABASE=docker
+      - MYSQL_USER=docker
+      - MYSQL_PASSWORD=docker
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+  - configPath: adminer
+    containerId: adminer
+    output:
+      image: adminer:latest
+      ports:
+      - 8081:8080
+  - configPath: php
+    containerId: php
+    output:
+      image: okty/php:7.2
+      volumes:
+      - "./:/usr/share/nginx/html"
+      environment:
+      - PHP_EXTENSIONS=pdo_mysql;intl
+  - configPath: nginx
+    containerId: nginx
+    output:
+      image: okty/nginx:1.14
+      ports:
+      - 8080:80
+      volumes:
+      - "./:/usr/share/nginx/html"
+      environment:
+      - MAX_UPLOAD_SIZE=2M
+      - PHP_CONTAINER_ID=php
+      - INDEX_SUBFOLDER=public
+      
