@@ -57,8 +57,6 @@ config:
         base: PHP_CONTAINER_ID
         destination: environment
         value: ""
-        validators:
-            required: true
       -
         id: index
         label: "Subfolder of the index file"
