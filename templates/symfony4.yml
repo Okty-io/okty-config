@@ -2,7 +2,7 @@ name: "Symfony 4"
 image: "https://cdn.worldvectorlogo.com/logos/symfony.svg"
 containers:
   - configPath: mysql
-    conainerId: mysql
+    containerId: mysql
     output:
       image: mysql:5.7
       ports:
@@ -27,7 +27,7 @@ containers:
       volumes:
       - "./:/usr/share/nginx/html"
       environment:
-      - PHP_EXTENSIONS=pdo_mysql;intl
+      - PHP_EXTENSIONS=pdo_mysql;intl;opcache
   - configPath: nginx
     containerId: nginx
     output:
