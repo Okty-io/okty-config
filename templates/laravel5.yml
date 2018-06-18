@@ -3,40 +3,31 @@ image: "https://cdn.worldvectorlogo.com/logos/laravel-1.svg"
 containers: 
   - configPath: mysql
     containerId: mysql
-    output:
-      image: mysql:5.7
-      ports:
-      - 3306:3306
-      volumes:
-      - "./docker/database:/var/lib/mysql"
-      environment:
-      - MYSQL_DATABASE=docker
-      - MYSQL_USER=docker
-      - MYSQL_PASSWORD=docker
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    config:
+      General_name: mysql
+      General_port: '3306'
+      General_application: "./docker/database"
+      Connection_database_name: docker
+      Connection_database_user: docker
+      Connection_database_password: docker
+      Connection_database_root: 'yes'
   - configPath: adminer
     containerId: adminer
-    output:
-      image: adminer:latest
-      ports:
-      - 8081:8080
+    config:
+      General_name: adminer
+      General_port: '8081'
   - configPath: php
     containerId: php
-    output:
-      image: okty/php:7.2
-      volumes:
-      - "./:/usr/share/nginx/html"
-      environment:
-      - PHP_EXTENSIONS=pdo_mysql
+    config:
+      General_name: php
+      General_application: "./"
+      Extensions_extensions: pdo_mysql;intl
   - configPath: nginx
     containerId: nginx
-    output:
-      image: okty/nginx:1.14
-      ports:
-      - 8080:80
-      volumes:
-      - "./:/usr/share/nginx/html"
-      environment:
-      - MAX_UPLOAD_SIZE=2M
-      - PHP_CONTAINER_ID=php
-      - INDEX_SUBFOLDER=public
+    config:
+      General_name: nginx
+      General_port: '8080'
+      General_application: "./"
+      Nginx_max_upload: 2M
+      Nginx_php: php
+      Nginx_index: public
