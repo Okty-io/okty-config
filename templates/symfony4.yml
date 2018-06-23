@@ -16,12 +16,12 @@ containers:
     config:
       General_name: adminer
       General_port: '8081'
-  - configPath: php
+  - configPath: php72
     containerId: php
     config:
       General_name: php
       General_application: "./"
-      Extensions_extensions: pdo_mysql;intl;opcache
+      Extensions_extensions: pdo_mysql,intl,opcache
   - configPath: nginx
     containerId: nginx
     config:

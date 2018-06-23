@@ -1,0 +1,59 @@
+name: "PHP FPM 7.1"
+image: "https://cdn.worldvectorlogo.com/logos/php-1.svg"
+docker: okty/php
+version: "7.1"
+config: 
+  - 
+    id: general
+    label: General
+    fields: 
+      - 
+        id: name 
+        label: "Container ID"
+        type: input
+        base: container_id
+        destination: id
+        value: php
+        validators:
+          required: true
+          regex: "^[a-z]+$"
+      - 
+        id: application
+        label: "Local path of the application"
+        type: input
+        base: "/usr/share/nginx/html"
+        destination: volumes
+        value: "./"
+        validators:
+          required: true
+  -   
+    id: extension 
+    label: Extensions
+    fields:
+      - 
+        id: extensions
+        label: "PHP Extensions"
+        type: multi-select 
+        source: 
+          "bcmath": "BCMath"
+          "calendar": "Calendar"
+          "dba": "DBA"
+          "exif": "Exif"
+          "gd": "GD"
+          "gettext": "GetText"
+          "intl": "Intl"
+          "mysqli": "MySQLi"
+          "opcache": "OPCache"
+          "pcntl": "PCNTL"
+          "pdo_mysql": "PDO Mysql"
+          "shmop": "SHMOP"
+          "soap": "SOAP"
+          "sockets": "Sockets"
+          "sysvmsg": "SysVMsg"
+          "sysvsem": "SysVSem"
+          "sysvshm": "SysVShm"
+          "xsl": "XSL"
+          "zend_test": "Zend_Test"
+        base: PHP_EXTENSIONS
+        destination: environment
+        value: ""

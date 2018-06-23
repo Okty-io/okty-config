@@ -1,5 +1,5 @@
-name: "Laravel 5"
-image: "https://cdn.worldvectorlogo.com/logos/laravel-1.svg"
+name: "Zend Framework 3"
+image: "https://cdn.worldvectorlogo.com/logos/zend-framework.svg"
 containers: 
   - configPath: mysql
     containerId: mysql
@@ -7,16 +7,16 @@ containers:
       General_name: mysql
       General_port: '3306'
       General_application: "./docker/database"
-      Connection_database_name: docker
-      Connection_database_user: docker
-      Connection_database_password: docker
+      Connection_database_name: zend
+      Connection_database_user: zend
+      Connection_database_password: zend
       Connection_database_root: 'yes'
   - configPath: adminer
     containerId: adminer
     config:
       General_name: adminer
       General_port: '8081'
-  - configPath: php72
+  - configPath: php71
     containerId: php
     config:
       General_name: php
