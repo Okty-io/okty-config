@@ -1,5 +1,5 @@
-name: "Laravel 5"
-image: "https://cdn.worldvectorlogo.com/logos/laravel-1.svg"
+name: "Zend Framework 3"
+image: "https://cdn.worldvectorlogo.com/logos/zend-framework.svg"
 containers: 
   - configPath: mysql
     containerId: mysql
