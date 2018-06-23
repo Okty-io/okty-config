@@ -9,7 +9,7 @@ if [ ! -z "$PHP_EXTENSIONS" ]
 then
 	apt-get update
 
-	for extension in $(echo $PHP_EXTENSIONS | tr ";" "\n")
+	for extension in $(echo $PHP_EXTENSIONS | tr "," "\n")
 	do
 		if [ "$extension" = "gd" ]; then
 			apt-get install -y libpng-dev libjpeg-dev;
