@@ -15,4 +15,3 @@ deploy:
   local-dir: "."
   on:
     repo: Okty-io/okty-config
-    branch: firebase
