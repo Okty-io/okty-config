@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '9.10.1'
+
+deploy:
+  provider: gcs
+  access_key_id: GOOG2BG5LUPDOLKUNMX5MYGA
+  secret_access_key:
+    secure: k2zc3np/XSxOafh91o13cwYT/NR9kYmd65elh0WWWMgqON8u3Yj0JjOIldv23vmrl9qkcgWvx3WYDJ3NItLl8iwg6PFIgfTN1ooK/q3N2wANk983KsKZISYJ9I906y+2PTKhxrCFKu1evFMCoRPHwQFcDw/4AbVPM2KjiZAP/lURLmIRuTRgNgZ7KmW/rVq/g0finbWn8g0KmExfZ0kOAZhlJWGCyCn8GPpnbpEpJbh7GALODoe918subRz2H4PiD2YaFMQ0YxrnQwab5PdNK6iHbWigSkJ8mFCzsTEKoLI2dZVm3VdXvZvZP8HTqe+OQ00JwL49T1rqWi9/w6r6AYzyfT5osIy2B06V99kMJNBJfDCZGEdUVz1RwvnZzgWwlE6uuQs1jXazo4qaUGERPYXtFE+EHmXe5bDHg9jNnEhGWS6rJ4POjSlqUCYk27W8sxiU7u0r4sVF4QwYn1gYPxGf2RENK9Lbv8jt1N8S4FBM2DyP2TiyNFuPdGpvQsrmRX6RY89c4X8VCNaA5jckLuPvvl0JaXTPJozKNxBU4YJdSTnx7Pfh6A9VPCacVDPkUw6hXt+ifaLTtBs92g4v26dPtsXpcSA0Vg4tuKOmTmjsQB2o4bptxytMiughnQ//dTwSwIrRFziqvPp6A7uGMy6l+T6nBWgfBMQQcd/PYmk=
+  bucket: okty-7e60c.appspot.com
+  local-dir: "."
+  on:
+    repo: Okty-io/okty-config
+    branch: firebase
