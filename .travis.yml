@@ -3,7 +3,8 @@ node_js:
 - '9.10.1'
 
 script:
-  ./yml_lint.sh
+  node test/lint.js containers
+  node test/lint.js templates
 
 deploy:
   provider: gcs
