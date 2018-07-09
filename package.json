@@ -1,0 +1,19 @@
+{
+  "name": "okty-config",
+  "version": "1.0.0",
+  "description": "The simplest application to create your docker projects.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Okty-io/okty-config.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Okty-io/okty-config/issues"
+  },
+  "homepage": "https://github.com/Okty-io/okty-config#readme",
+  "devDependencies": {
+    "yaml-lint": "^1.2.4"
+  }
+}
