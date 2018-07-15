@@ -15,5 +15,11 @@
   "homepage": "https://github.com/Okty-io/okty-config#readme",
   "devDependencies": {
     "yaml-lint": "^1.2.4"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^1.7.0",
+    "firebase": "^5.2.0",
+    "xhr2": "^0.1.4",
+    "xmlhttprequest": "^1.8.0"
   }
 }
