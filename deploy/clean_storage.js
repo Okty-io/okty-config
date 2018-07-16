@@ -1,4 +1,3 @@
-global.XMLHttpRequest = require("xhr2");
 const fs = require('fs');
 const Storage = require('@google-cloud/storage');
 
@@ -12,7 +11,7 @@ const storage = new Storage(config);
 
 const path = 'containers/';
 
-getLocalFiles(path);
+// getLocalFiles(path);
 getRemoteFiles(path);
 
 function getLocalFiles(folder) {

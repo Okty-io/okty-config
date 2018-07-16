@@ -2,7 +2,7 @@
   "name": "okty-config",
   "version": "1.0.0",
   "description": "The simplest application to create your docker projects.",
-  "main": "index.js",
+  "main": "local/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Okty-io/okty-config.git"
@@ -13,13 +13,16 @@
     "url": "https://github.com/Okty-io/okty-config/issues"
   },
   "homepage": "https://github.com/Okty-io/okty-config#readme",
+  "scripts": {
+    "dev": "nodemon ./local/index.js"
+  },
   "devDependencies": {
-    "yaml-lint": "^1.2.4"
+    "nodemon": "^1.18.2"
   },
   "dependencies": {
     "@google-cloud/storage": "^1.7.0",
-    "firebase": "^5.2.0",
-    "xhr2": "^0.1.4",
-    "xmlhttprequest": "^1.8.0"
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "yaml-lint": "^1.2.4"
   }
 }
