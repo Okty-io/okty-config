@@ -1,0 +1,30 @@
+name: "Mailcatcher"
+image: "https://mailcatcher.me/logo.png"
+docker: tophfr/mailcatcher
+version: "0.6"
+config:
+  - 
+    id: general
+    label: general
+    fields:
+      - 
+        id: name 
+        label: "Container ID"
+        type: input
+        base: container_id
+        destination: id
+        value: mailcatcher
+        validators:
+            required: true
+            regex: "^[a-z]+$"
+      - 
+        id: port 
+        label: "Port used to access the webmail from the host machine"
+        type: input
+        base: "80"
+        destination: ports
+        value: "1080"
+        validators:
+            required: true
+            numbers: { min: 0, max: 65535 }
+
