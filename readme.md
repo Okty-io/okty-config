@@ -194,8 +194,8 @@ Make your own or ask for it on through pull requests or issues !
 
 ## Contributors
 
-| [<img src="https://avatars1.githubusercontent.com/u/13522273?s=460&v=4" width="100px;"/><br /><sub><b>Mapsred</b></sub>](https://github.com/Mapsred) | [<img src="https://avatars0.githubusercontent.com/u/17589926?s=460&v=4" width="100px;"/><br /><sub><b>agranjeon</b></sub>](https://github.com/agranjeon)
-| :---: | :---: |
+| [<img src="https://avatars1.githubusercontent.com/u/13522273?s=460&v=4" width="100px;"/><br /><sub><b>Mapsred</b></sub>](https://github.com/Mapsred) | [<img src="https://avatars0.githubusercontent.com/u/17589926?s=460&v=4" width="100px;"/><br /><sub><b>agranjeon</b></sub>](https://github.com/agranjeon) | [<img src="https://avatars2.githubusercontent.com/u/734582?s=460&v=4" width="100px;"/><br /><sub><b>orions</b></sub>](https://github.com/orions) | [<img src="https://avatars0.githubusercontent.com/u/3369266?s=460&v=4" width="100px;"/><br /><sub><b>Pierstoval</b></sub>](https://github.com/Pierstoval)
+| :---: | :---: | :---: | :---: |
 
 ## License
 Okty is made available under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
