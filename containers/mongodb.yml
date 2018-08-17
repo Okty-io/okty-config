@@ -21,9 +21,9 @@ config:
         id: port 
         label: "Port used on the host machine"
         type: input
-        base: "3306"
+        base: "27017"
         destination: ports
-        value: "3306"
+        value: "27017"
         validators:
             numbers: { min: 0, max: 65535 }
       - 
