@@ -8,7 +8,14 @@ const configPath = './config/';
 app.use(cors());
 
 app.get('/:folder', (req, res) => {
-    let files = fs.readdirSync(configPath + req.params.folder);
+    let files = [];
+    try {
+        files = fs.readdirSync(configPath + req.params.folder);
+    }catch (error) {
+        res.status(404).send(null);
+        return;
+    }
+
     res.send(JSON.stringify(files));
 });
 
@@ -18,9 +25,7 @@ app.get('/:folder/:file', (req, res) => {
         res.status(404).send(null);
         return;
     }
-
     let file = fs.readFileSync(path);
-
     res.send(JSON.stringify({
         content: Buffer.from(file).toString('base64')
     }));
