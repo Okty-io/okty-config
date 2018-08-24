@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/Okty-io/okty-config#readme",
   "scripts": {
-    "dev": "nodemon ./local/index.js"
+    "start": "nodemon ./local/index.js"
   },
   "devDependencies": {
     "nodemon": "^1.18.2"
