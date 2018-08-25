@@ -42,6 +42,12 @@ config:
         value: "./"
         validators:
           required: true
+      - 
+        id: workingdir
+        type: hidden
+        base: "working_dir"
+        destination: docker-compose
+        value: "./home/node/app"
   -   
     id: entrypoint 
     label: Entrypoint
