@@ -1,7 +1,7 @@
 name: "Mailcatcher"
 image: "https://mailcatcher.me/logo.png"
 docker: tophfr/mailcatcher
-version: "0.6"
+version: "0.6.5"
 config:
   - 
     id: general
