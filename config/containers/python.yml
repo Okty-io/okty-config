@@ -1,0 +1,52 @@
+name: "Python"
+image: "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+docker: "python"
+version: "3.7.0-stretch"
+config:
+-   id: general
+    label: General
+    fields:
+    -   id: name
+        label: "Container ID"
+        type: input
+        base: container_id
+        destination: id
+        value: python
+        validators:
+            required: true
+            regex: "^[a-z]+$"
+    -   id: image
+        label: "Version"
+        type: select
+        source:
+            "python:3.7.0-stretch": "3.7"
+            "python:1.7.15-stretch": "2.7"
+        base: image
+        destination: docker-compose
+        value: node:latest
+        validators:
+            required: true
+    -   id: application
+        label: "Local path of the application"
+        type: input
+        base: "/usr/src/app"
+        destination: volumes
+        value: "./"
+        validators:
+            required: true
+    -   id: workingdir
+        type: hidden
+        base: "working_dir"
+        destination: docker-compose
+        value: "/usr/src/app"
+-   id: entrypoint
+    label: Entrypoint
+    fields:
+    -   id: command
+        label: "Command to execute"
+        type: input
+        base: command
+        destination: docker-compose
+        value: "python3 main.py"
+        validators:
+            required: true
