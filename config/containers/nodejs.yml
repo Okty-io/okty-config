@@ -47,7 +47,7 @@ config:
         type: hidden
         base: "working_dir"
         destination: docker-compose
-        value: "./home/node/app"
+        value: "/home/node/app"
   -   
     id: entrypoint 
     label: Entrypoint
