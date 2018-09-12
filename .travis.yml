@@ -4,6 +4,7 @@ node_js:
 script:
 - node deploy/tests/lint.js ./config/containers
 - node deploy/tests/lint.js ./config/templates
+before_deploy: node deploy/clean_storage.js
 deploy:
   provider: s3
   access_key_id: AKIAJJR32NCFUD54PQYA
@@ -14,4 +15,4 @@ deploy:
   acl: public_read
   on:
     repo: Okty-io/okty-config
-    branch: aws-s3
+    branch: master
