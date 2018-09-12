@@ -1,18 +1,18 @@
 language: node_js
 node_js:
-- '9.10.1'
-
+- 9.10.1
 script:
-  - node deploy/tests/lint.js ./config/containers
-  - node deploy/tests/lint.js ./config/templates
-
+- node deploy/tests/lint.js ./config/containers
+- node deploy/tests/lint.js ./config/templates
+before_deploy: node deploy/clean_storage.js
 deploy:
-  provider: gcs
-  access_key_id: GOOG2BG5LUPDOLKUNMX5MYGA
+  provider: s3
+  access_key_id: AKIAJJR32NCFUD54PQYA
   secret_access_key:
-    secure: k2zc3np/XSxOafh91o13cwYT/NR9kYmd65elh0WWWMgqON8u3Yj0JjOIldv23vmrl9qkcgWvx3WYDJ3NItLl8iwg6PFIgfTN1ooK/q3N2wANk983KsKZISYJ9I906y+2PTKhxrCFKu1evFMCoRPHwQFcDw/4AbVPM2KjiZAP/lURLmIRuTRgNgZ7KmW/rVq/g0finbWn8g0KmExfZ0kOAZhlJWGCyCn8GPpnbpEpJbh7GALODoe918subRz2H4PiD2YaFMQ0YxrnQwab5PdNK6iHbWigSkJ8mFCzsTEKoLI2dZVm3VdXvZvZP8HTqe+OQ00JwL49T1rqWi9/w6r6AYzyfT5osIy2B06V99kMJNBJfDCZGEdUVz1RwvnZzgWwlE6uuQs1jXazo4qaUGERPYXtFE+EHmXe5bDHg9jNnEhGWS6rJ4POjSlqUCYk27W8sxiU7u0r4sVF4QwYn1gYPxGf2RENK9Lbv8jt1N8S4FBM2DyP2TiyNFuPdGpvQsrmRX6RY89c4X8VCNaA5jckLuPvvl0JaXTPJozKNxBU4YJdSTnx7Pfh6A9VPCacVDPkUw6hXt+ifaLTtBs92g4v26dPtsXpcSA0Vg4tuKOmTmjsQB2o4bptxytMiughnQ//dTwSwIrRFziqvPp6A7uGMy6l+T6nBWgfBMQQcd/PYmk=
-  bucket: okty-7e60c.appspot.com
-  local-dir: "config"
+    secure: XOWSdXKYWXb+CsUKuIF+rsCpUUceoFdqwOUO9OwC+9W2lbDiF8DSwBV9RV8z1/bA2CJ/KwWAevmqx16SiLTE0NxOidyIhmkP+JL69IB6vaCwnJgEy2QRwVh3lVSS2ApV1uICUyoowW18VeZJKR9R6e2gmq0c7+34xmu1z8FDsyzypYZ7UX64G+iN3xSGoOMC2qoNkmQ0GQGo64/Ec/SVCFa6QT3clnvhWPzhtMILOOktPF32Tc/ulv/Zf0BU9eBR0mc6FSpeeLwLVMq574thzuXH0GrJfuRATbEV3CcMUbPBnfxhqk7WL87qilgm2m9faQyWUCs2MVTBP7eV9DAWO8jsdrNbyFUeEeFHXVf1nmN0eXa6DOqUQMkBLYDzv7QZKnr6N9ubDwVZQ+jgG+guDv/Hq89xXUed4Krzp62JVUa354UjVsS1EYakHBe1uJWYC/pk8oej9/DcWZodunjYhGRkG0KFiaoRxhGSuicE38ADeZxMSmB2di63DOuEfCFn72+Z+LSI/eikqY9GOabTmL5tZtryZ4E9Xt7TEoTFpidKWCUqqMDSWfldjQZeD+gJcJNhftxAceiqCI7+BzgRPIe7bMJMWCn6Qz7Z8ZJZPpPzinGDgEFmhyOF3F0xnDPdA4hDml7KPvBzYv3JOu3sAS3YYQQfIUs4n8iNmhbzNkI=
+  bucket: okty
+  local-dir: config
+  acl: public_read
   on:
     repo: Okty-io/okty-config
     branch: master
