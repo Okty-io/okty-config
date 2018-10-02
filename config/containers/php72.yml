@@ -35,6 +35,7 @@ config:
         label: "PHP Extensions"
         type: multi-select 
         source: 
+          "apcu": "APCu"
           "bcmath": "BCMath"
           "calendar": "Calendar"
           "dba": "DBA"
