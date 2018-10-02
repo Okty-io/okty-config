@@ -53,6 +53,7 @@ config:
           "sysvmsg": "SysVMsg"
           "sysvsem": "SysVSem"
           "sysvshm": "SysVShm"
+          "xdebug": "XDebug"
           "xsl": "XSL"
           "zend_test": "Zend_Test"
         base: PHP_EXTENSIONS
