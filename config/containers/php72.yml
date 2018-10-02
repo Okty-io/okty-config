@@ -35,6 +35,7 @@ config:
         label: "PHP Extensions"
         type: multi-select 
         source: 
+          "apcu": "APCu"
           "bcmath": "BCMath"
           "calendar": "Calendar"
           "dba": "DBA"
@@ -52,6 +53,7 @@ config:
           "sysvmsg": "SysVMsg"
           "sysvsem": "SysVSem"
           "sysvshm": "SysVShm"
+          "xdebug": "XDebug"
           "xsl": "XSL"
           "zend_test": "Zend_Test"
         base: PHP_EXTENSIONS
