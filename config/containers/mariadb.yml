@@ -1,4 +1,4 @@
-name: "MariaDB"
+name: "MariaDB 10.3"
 image: "https://cdn.worldvectorlogo.com/logos/mariadb.svg"
 docker: mariadb
 version: 10.3
