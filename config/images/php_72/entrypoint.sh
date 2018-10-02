@@ -28,6 +28,20 @@ then
 			apt-get install -y libxslt-dev;
 		fi
 
+		if [ "$extension" = "apcu" ]; then
+			pecl install apcu
+			echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apcu.ini
+
+            continue
+		fi
+
+		if [ "$extension" = "xdebug" ]; then
+            pecl install xdebug
+            docker-php-ext-enable xdebug
+
+            continue
+		fi
+
 	    docker-php-ext-install ${extension};
 	done
 fi
