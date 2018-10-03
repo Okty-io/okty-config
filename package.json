@@ -16,12 +16,8 @@
   "scripts": {
     "start": "nodemon ./local/index.js"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.2"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
     "yaml-lint": "^1.2.4"
   }
 }
