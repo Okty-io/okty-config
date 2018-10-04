@@ -1,8 +1,8 @@
 name: "Zend Framework 3"
 image: "https://cdn.worldvectorlogo.com/logos/zend-framework.svg"
-containers: 
-  - configPath: mysql
-    containerId: mysql
+containers:
+  - id: mysql
+    container: mysql
     config:
       General_name: mysql
       General_port: '3306'
@@ -11,19 +11,19 @@ containers:
       Connection_database_user: zend
       Connection_database_password: zend
       Connection_database_root: 'yes'
-  - configPath: adminer
-    containerId: adminer
+  - id: adminer
+    container: adminer
     config:
       General_name: adminer
       General_port: '8081'
-  - configPath: php71
-    containerId: php
+  - id: php
+    container: php71
     config:
       General_name: php
       General_application: "./"
       Extensions_extensions: pdo_mysql,intl
-  - configPath: nginx
-    containerId: nginx
+  - id: nginx
+    container: nginx
     config:
       General_name: nginx
       General_port: '8080'

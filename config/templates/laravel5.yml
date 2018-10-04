@@ -1,8 +1,8 @@
 name: "Laravel 5"
 image: "https://cdn.worldvectorlogo.com/logos/laravel-1.svg"
 containers: 
-  - configPath: mysql
-    containerId: mysql
+  - id: mysql
+    container: mysql
     config:
       General_name: mysql
       General_port: '3306'
@@ -11,19 +11,19 @@ containers:
       Connection_database_user: docker
       Connection_database_password: docker
       Connection_database_root: 'yes'
-  - configPath: adminer
-    containerId: adminer
+  - id: adminer
+    container: adminer
     config:
       General_name: adminer
       General_port: '8081'
-  - configPath: php72
-    containerId: php
+  - id: php
+    container: php72
     config:
       General_name: php
       General_application: "./"
       Extensions_extensions: pdo_mysql,intl
-  - configPath: nginx
-    containerId: nginx
+  - id: nginx
+    container: nginx
     config:
       General_name: nginx
       General_port: '8080'
