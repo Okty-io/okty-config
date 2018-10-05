@@ -4,15 +4,4 @@ node_js:
 script:
 - node deploy/tests/lint.js ./config/containers
 - node deploy/tests/lint.js ./config/templates
-before_deploy: node deploy/clean_storage.js
-deploy:
-  provider: s3
-  access_key_id: AKIAJJR32NCFUD54PQYA
-  secret_access_key:
-    secure: XOWSdXKYWXb+CsUKuIF+rsCpUUceoFdqwOUO9OwC+9W2lbDiF8DSwBV9RV8z1/bA2CJ/KwWAevmqx16SiLTE0NxOidyIhmkP+JL69IB6vaCwnJgEy2QRwVh3lVSS2ApV1uICUyoowW18VeZJKR9R6e2gmq0c7+34xmu1z8FDsyzypYZ7UX64G+iN3xSGoOMC2qoNkmQ0GQGo64/Ec/SVCFa6QT3clnvhWPzhtMILOOktPF32Tc/ulv/Zf0BU9eBR0mc6FSpeeLwLVMq574thzuXH0GrJfuRATbEV3CcMUbPBnfxhqk7WL87qilgm2m9faQyWUCs2MVTBP7eV9DAWO8jsdrNbyFUeEeFHXVf1nmN0eXa6DOqUQMkBLYDzv7QZKnr6N9ubDwVZQ+jgG+guDv/Hq89xXUed4Krzp62JVUa354UjVsS1EYakHBe1uJWYC/pk8oej9/DcWZodunjYhGRkG0KFiaoRxhGSuicE38ADeZxMSmB2di63DOuEfCFn72+Z+LSI/eikqY9GOabTmL5tZtryZ4E9Xt7TEoTFpidKWCUqqMDSWfldjQZeD+gJcJNhftxAceiqCI7+BzgRPIe7bMJMWCn6Qz7Z8ZJZPpPzinGDgEFmhyOF3F0xnDPdA4hDml7KPvBzYv3JOu3sAS3YYQQfIUs4n8iNmhbzNkI=
-  bucket: okty
-  local-dir: config
-  acl: public_read
-  on:
-    repo: Okty-io/okty-config
-    branch: master
+
