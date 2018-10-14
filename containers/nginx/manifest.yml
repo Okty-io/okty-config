@@ -1,0 +1,16 @@
+files:
+    - Dockerfile
+    - default.conf
+config:
+    Dockerfile:
+        output: ./
+    default.conf:
+        output: ./
+        args:
+            root_folder:
+                default: ''
+            map_upload_size:
+                default: ''
+            php_container_link:
+                default: ''
+                
