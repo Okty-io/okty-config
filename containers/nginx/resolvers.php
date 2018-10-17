@@ -1,6 +1,6 @@
 <?php
 
-function map_upload_size($value)
+function max_upload_size($value)
 {
     return "client_max_body_size $value;";
 }
