@@ -10,7 +10,7 @@ config:
             root_folder:
                 default: ''
             map_upload_size:
-                default: ''
+                default: '2M'
             php_container_link:
                 default: ''
                 
