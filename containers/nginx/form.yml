@@ -1,6 +1,5 @@
 name: "Nginx 1.14"
 logo: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
-dockerfile: './docker/nginx'
 config:
     -   id: general
         label: General
