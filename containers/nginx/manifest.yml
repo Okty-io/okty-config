@@ -1,11 +1,13 @@
+docker:
+    dockerfile: './docker/nginx/'
 files:
     - Dockerfile
     - default.conf
 config:
     Dockerfile:
-        output: ./
+        output: ./docker/nginx
     default.conf:
-        output: ./
+        output: ./docker/nginx
         args:
             root_folder:
                 default: ''
