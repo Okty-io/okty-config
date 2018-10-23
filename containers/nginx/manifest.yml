@@ -1,13 +1,13 @@
 docker:
-    build: './docker/nginx/'
+    build: 'docker/nginx/'
 files:
     - Dockerfile
     - default.conf
 config:
     Dockerfile:
-        output: ./docker/nginx/
+        output: docker/nginx/
     default.conf:
-        output: ./docker/nginx/
+        output: docker/nginx/
         args:
             root_folder:
                 default: ''
