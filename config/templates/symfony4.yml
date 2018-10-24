@@ -21,7 +21,7 @@ containers:
     config:
       General_name: php
       General_application: "./"
-      Extensions_extensions: pdo_mysql,intl,opcache,apcu,xdebug
+      Extensions_extensions: pdo_mysql,intl,opcache,xdebug
   - id: nginx
     container: nginx
     config:
