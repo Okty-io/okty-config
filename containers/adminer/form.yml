@@ -1,24 +1,24 @@
-name: "Adminer"
-logo: "https://i.imgur.com/Gf111SP.png"
+name: 'Adminer'
+logo: 'https://i.imgur.com/Gf111SP.png'
 config:
   - id: general
     label: General
     fields:
       - id: name
-        label: "Container ID"
+        label: 'Container ID'
         type: input
         base: container_id
         destination: id
         value: adminer
         validators:
           required: true
-          regex: "^[a-z]+$"
+          regex: '^[a-z]+$'
       - id: port
-        label: "Port used on the host machine"
+        label: 'Port used on the host machine'
         type: input
-        base: "8080"
+        base: '8080'
         destination: ports
-        value: "8081"
+        value: '8081'
         validators:
           required: true
           numbers: { min: 0, max: 65535 }
