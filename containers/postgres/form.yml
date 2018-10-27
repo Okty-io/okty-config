@@ -1,74 +1,63 @@
 name: "PostgreSQL 10.4"
-image: "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
-docker: postgres
-version: 10.4
-config: 
-  - 
-    id: general
+logo: "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+config:
+  - id: general
     label: General
-    fields: 
-      - 
-        id: name 
+    fields:
+      - id: name
         label: "Container ID"
         type: input
         base: container_id
         destination: id
         value: postgresql
-        validators: 
-            required: true
-            regex: "^[a-z]+$"
-      - 
-        id: port 
+        validators:
+          required: true
+          regex: "^[a-z]+$"
+      - id: port
         label: "PostgreSQL port used on the host machine"
         type: input
         base: "5432"
         destination: ports
         value: "5432"
         validators:
-            numbers: { min: 0, max: 65535 }
-      - 
-        id: application
+          numbers: { min: 0, max: 65535 }
+      - id: application
         label: "Local path of database folder"
         type: input
         base: "/var/lib/postgresql/data/pgdata"
         destination: volumes
         value: "./docker/database"
         validators:
-            required: true  
-      -
-        id: pgdata
+          required: true
+      - id: pgdata
         type: hidden
         base: PGDATA
         destination: environment
         value: "/var/lib/postgresql/data/pgdata"
-  -   
-    id: connection
+  - id: connection
     label: Connection
     fields:
-      - 
-        id: database_name
+      - id: database_name
         label: "Database Name"
         type: input
         base: POSTGRES_DB
         destination: environment
         value: "docker"
         validators:
-            required: true
-      -
-        id: database_user
+          required: true
+      - id: database_user
         label: User
         type: input
         base: POSTGRES_USER
         destination: environment
         value: "user"
         validators:
-            required: true
-      -
-        id: database_password
+          required: true
+      - id: database_password
         label: Password
         type: input
         base: POSTGRES_PASSWORD
         destination: environment
         value: "password"
         validators:
-            required: true
+          required: true
