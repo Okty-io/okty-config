@@ -1,0 +1,3 @@
+docker:
+  image: adminer
+  tag: latest
