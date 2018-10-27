@@ -26,9 +26,10 @@ containers:
         latest: 'latest'
         ports:
           - '8081:8080'
-  - image: 'mysql'
+  - image: 'mariadb'
     args:
-      - id: 'mysql'
+      - id: 'mariadb'
+        version: '10.3'
         environments:
           - 'MYSQL_DATABASE=docker'
           - 'MYSQL_USER=docker'
