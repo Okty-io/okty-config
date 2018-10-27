@@ -1,0 +1,3 @@
+docker:
+  image: 'mongo'
+  tag: '4'
