@@ -1,0 +1,3 @@
+docker:
+  image: 'mysql'
+  tag: '5.7'
