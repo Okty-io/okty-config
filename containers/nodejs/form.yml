@@ -1,14 +1,10 @@
 name: "NodeJS"
-image: "https://cdn.worldvectorlogo.com/logos/nodejs-1.svg"
-docker: node
-version: "latest"
-config: 
-  - 
-    id: general
+logo: "https://cdn.worldvectorlogo.com/logos/nodejs-1.svg"
+config:
+  - id: general
     label: General
-    fields: 
-      - 
-        id: name 
+    fields:
+      - id: name
         label: "Container ID"
         type: input
         base: container_id
@@ -17,11 +13,10 @@ config:
         validators:
           required: true
           regex: "^[a-z]+$"
-      - 
-        id: image 
+      - id: image
         label: "Version"
         type: select
-        source: 
+        source:
           "node:latest": "latest"
           "node:10": "10"
           "node:8": "8"
@@ -33,8 +28,7 @@ config:
         value: node:latest
         validators:
           required: true
-      - 
-        id: application
+      - id: application
         label: "Local path of the application"
         type: input
         base: "/home/node/app"
@@ -42,28 +36,24 @@ config:
         value: "./"
         validators:
           required: true
-      - 
-        id: workingdir
+      - id: workingdir
         type: hidden
         base: "working_dir"
         destination: docker-compose
         value: "/home/node/app"
-  -   
-    id: entrypoint 
+  - id: entrypoint
     label: Entrypoint
     fields:
-      - 
-        id: port 
+      - id: port
         label: "Port used on the host machine"
         type: input
         base: "3000"
         destination: ports
         value: "3000"
         validators:
-            required: true
-            numbers: { min: 0, max: 65535 }
-      - 
-        id: command
+          required: true
+          numbers: { min: 0, max: 65535 }
+      - id: command
         label: "Command to execute"
         type: input
         base: command
