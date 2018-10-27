@@ -1,4 +1,4 @@
-name: 'MariaDB 10.3'
+name: 'MariaDB'
 logo: 'https://cdn.worldvectorlogo.com/logos/mariadb.svg'
 config:
   - id: general

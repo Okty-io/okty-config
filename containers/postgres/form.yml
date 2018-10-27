@@ -1,4 +1,4 @@
-name: 'PostgreSQL 10.4'
+name: 'PostgreSQL'
 logo: 'https://cdn.worldvectorlogo.com/logos/postgresql.svg'
 config:
   - id: general

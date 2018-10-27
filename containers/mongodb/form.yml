@@ -1,4 +1,4 @@
-name: 'MongoDB 4'
+name: 'MongoDB'
 logo: 'https://cdn.worldvectorlogo.com/logos/mongodb.svg'
 config:
   - id: general
