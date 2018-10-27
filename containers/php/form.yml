@@ -1,14 +1,10 @@
-name: "PHP FPM 7.2"
-image: "https://cdn.worldvectorlogo.com/logos/php-1.svg"
-docker: okty/php
-version: "7.2"
-config: 
-  - 
-    id: general
+name: "PHP FPM"
+log: "https://cdn.worldvectorlogo.com/logos/php-1.svg"
+config:
+  - id: general
     label: General
-    fields: 
-      - 
-        id: name 
+    fields:
+      - id: name
         label: "Container ID"
         type: input
         base: container_id
@@ -17,8 +13,7 @@ config:
         validators:
           required: true
           regex: "^[a-z]+$"
-      - 
-        id: application
+      - id: application
         label: "Local path of the application"
         type: input
         base: "/usr/share/nginx/html"
@@ -26,15 +21,13 @@ config:
         value: "./"
         validators:
           required: true
-  -   
-    id: extension 
+  - id: extension
     label: Extensions
     fields:
-      - 
-        id: extensions
+      - id: extensions
         label: "PHP Extensions"
-        type: multi-select 
-        source: 
+        type: multi-select
+        source:
           "apcu": "APCu"
           "bcmath": "BCMath"
           "calendar": "Calendar"
