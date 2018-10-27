@@ -1,0 +1,15 @@
+name: 'Composer'
+logo: 'https://cdn.worldvectorlogo.com/logos/composer.svg'
+config:
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: 'Container ID'
+        type: input
+        base: container_id
+        destination: id
+        value: composer
+        validators:
+          required: true
+          regex: '^[a-z]+$'
