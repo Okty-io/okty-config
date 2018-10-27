@@ -1,0 +1,13 @@
+name: "Symfony 4"
+logo: "https://cdn.worldvectorlogo.com/logos/symfony.svg"
+containers:
+  - image: nginx
+    args: 
+      - id: nginx
+      - volumes:
+        - "8080:80"
+      - environments:
+        - "APP_ENV=dev"
+  - image: php72
+    args:
+      - id: php
