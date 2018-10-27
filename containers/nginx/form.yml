@@ -1,56 +1,56 @@
 name: "Nginx 1.14"
 logo: "https://cdn.worldvectorlogo.com/logos/nginx.svg"
 config:
-    -   id: general
-        label: General
-        fields:
-            -   id: name
-                label: "Container ID"
-                type: input
-                base: container_id
-                destination: id
-                value: nginx
-                validators:
-                    required: true
-                    regex: "^[a-z]+$"
-            -   id: port
-                label: "Port used on the host machine"
-                type: input
-                base: "80"
-                destination: ports
-                value: "8080"
-                validators:
-                    required: true
-                    numbers: { min: 0, max: 65535 }
-            -   id: application
-                label: "Local path of the application"
-                type: input
-                base: "/usr/share/nginx/html"
-                destination: volumes
-                value: "./"
-                validators:
-                    required: true
-    -   id: nginx
-        label: Nginx
-        fields:
-            -   id: max_upload
-                label: "Max upload size"
-                type: input
-                base: MAX_UPLOAD_SIZE
-                destination: files
-                value: "2M"
-                validators:
-                    required: true
-                    regex: "^[0-9]+(M|G)$"
-            -   id: php
-                label: "PHP Container"
-                type: select-container
-                base: PHP_CONTAINER_ID
-                destination: files
-                value: ""
-            -   id: index
-                label: "Subfolder of the index file"
-                type: input
-                base: INDEX_SUBFOLDER
-                destination: files
-                value: ""
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: "Container ID"
+        type: input
+        base: container_id
+        destination: id
+        value: nginx
+        validators:
+          required: true
+          regex: "^[a-z]+$"
+      - id: port
+        label: "Port used on the host machine"
+        type: input
+        base: "80"
+        destination: ports
+        value: "8080"
+        validators:
+          required: true
+          numbers: { min: 0, max: 65535 }
+      - id: application
+        label: "Local path of the application"
+        type: input
+        base: "/usr/share/nginx/html"
+        destination: volumes
+        value: "./"
+        validators:
+          required: true
+  - id: nginx
+    label: Nginx
+    fields:
+      - id: max_upload
+        label: "Max upload size"
+        type: input
+        base: MAX_UPLOAD_SIZE
+        destination: files
+        value: "2M"
+        validators:
+          required: true
+          regex: "^[0-9]+(M|G)$"
+      - id: php
+        label: "PHP Container"
+        type: select-container
+        base: PHP_CONTAINER_ID
+        destination: files
+        value: ""
+      - id: index
+        label: "Subfolder of the index file"
+        type: input
+        base: INDEX_SUBFOLDER
+        destination: files
+        value: ""
