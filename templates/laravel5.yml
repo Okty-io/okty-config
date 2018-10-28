@@ -3,38 +3,38 @@ logo: 'https://cdn.worldvectorlogo.com/logos/laravel-1.svg'
 containers:
   - image: 'nginx'
     args:
-      - id: 'nginx'
-      - ports:
-          - '8080:80'
-      - volumes:
-          - './:/usr/share/nginx/html'
-      - files:
-          php_container_link: 'php'
-          max_upload_size: '2M'
-          root_foder: 'public'
+      id: 'nginx'
+      ports:
+        - '8080:80'
+      volumes:
+        - './:/usr/share/nginx/html'
+      files:
+        php_container_link: 'php'
+        max_upload_size: '2M'
+        root_folder: 'public'
   - image: 'php'
     args:
-      - id: 'php'
-      - version: '7.2-fpm'
-      - volumes:
-          - './:/usr/share/nginx/html'
-      - files:
-          php_extensions: 'pdo_mysql,intl,opcache'
+      id: 'php'
+      version: '7.2-fpm'
+      volumes:
+        - './:/usr/share/nginx/html'
+      files:
+        php_extensions: 'pdo_mysql,intl,opcache'
   - image: 'adminer'
     args:
-      - id: 'adminer'
-        latest: 'latest'
-        ports:
-          - '8081:8080'
+      id: 'adminer'
+      version: 'latest'
+      ports:
+        - '8081:8080'
   - image: 'mariadb'
     args:
-      - id: 'mariadb'
-        version: '10.3'
-        environments:
-          - 'MYSQL_DATABASE=docker'
-          - 'MYSQL_USER=docker'
-          - 'MYSQL_PASSWORD=docker'
-          - 'MYSQL_RANDOM_ROOT_PASSWORD=yes'
+      id: 'mariadb'
+      version: '10.3'
+      environments:
+        - 'MYSQL_DATABASE=docker'
+        - 'MYSQL_USER=docker'
+        - 'MYSQL_PASSWORD=docker'
+        - 'MYSQL_RANDOM_ROOT_PASSWORD=yes'
   - image: 'composer'
     args:
-      - id: 'composer'
+      id: 'composer'
