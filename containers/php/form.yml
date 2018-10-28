@@ -1,5 +1,5 @@
 name: 'PHP FPM'
-log: 'https://cdn.worldvectorlogo.com/logos/php-1.svg'
+logo: 'https://cdn.worldvectorlogo.com/logos/php-1.svg'
 config:
   - id: general
     label: General
