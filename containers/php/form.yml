@@ -21,6 +21,13 @@ config:
         value: './'
         validators:
           required: true
+      - id: version
+        label: 'Version'
+        type: 'select'
+        destination: version
+        source:
+          '7.1-fpm': '7.1'
+          '7.2-fpm': '7.2'
   - id: extension
     label: Extensions
     fields:
