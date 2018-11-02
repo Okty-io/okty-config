@@ -5,10 +5,10 @@ module.exports = {
 
     root_folder: function (value) {
         if (!value) {
-            return value;
+            return '/usr/share/nginx/html';
         }
 
-        return `/usr/share/nginx/html${value}`;
+        return `/usr/share/nginx/html/${value}`;
     },
 
     php_container_link: function (value) {
