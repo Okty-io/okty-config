@@ -7,17 +7,11 @@ const templatesPath = './templates';
 const containers = fs.readdirSync(containersPath);
 containers.forEach(container => {
     const files = fs.readdirSync(`${containersPath}/${container}`);
-    files.forEach(file => {
-        const currentFile = `${containersPath}/${container}/${file}`;
-        lintFile(currentFile)
-    });
+    files.forEach(file => lintFile(`${containersPath}/${container}/${file}`));
 });
 
 const templates = fs.readdirSync(templatesPath);
-templates.forEach(template => {
-    const currentFile = `${templatesPath}/${template}`;
-    lintFile(currentFile);
-});
+templates.forEach(template => lintFile(`${templatesPath}/${template}`));
 
 // Utils functions
 
