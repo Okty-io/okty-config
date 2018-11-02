@@ -8,9 +8,8 @@ for file in *; do
 
     aws lambda get-function --function-name ${container} > /dev/null 2>&1
     if [ $? -eq 0 ]; then
-        aws lambda update-function-code \
-            --function-name ${container} \
-            --zip-file fileb://${file}
+        aws lambda publish-versionq \
+            --function-name ${container}
     else
         aws lambda create-function \
             --function-name ${container} \

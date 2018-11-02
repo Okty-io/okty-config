@@ -27,7 +27,7 @@ for container in *; do
         aws lambda update-function-code \
             --function-name ${container} \
             --zip-file fileb://resolvers.zip \
-            --dry-run > /dev/null
+            --publish false > /dev/null
     else
         aws lambda create-function \
             --function-name ${container} \
