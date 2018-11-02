@@ -27,7 +27,7 @@ for container in *; do
         aws lambda update-function-code \
             --function-name ${container} \
             --zip-file fileb://resolvers.zip \
-            --publish false > /dev/null
+            --dry-run > /dev/null
     else
         aws lambda create-function \
             --function-name ${container} \
@@ -35,7 +35,7 @@ for container in *; do
             --runtime nodejs8.10 \
             --handler handler.handle \
             --role arn:aws:iam::593664064329:role/service-role/ResolverRole \
-            --dry-run > /dev/null
+            --publish false > /dev/null
     fi
 
     if [ $? -ne 0 ]; then
