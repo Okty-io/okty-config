@@ -1,13 +1,13 @@
-language: python
-python: "3.6"
+language: node_js
+node_js: "8.10"
 
-cache: pip
+script:
+    - npm install
 
-install:
+before_deploy:
+    - apt-get install python-pip
     - pip install awscli
     - export PATH=$PATH:$HOME/.local/bin
-
-script: ignore
 
 deploy:
     provider: script
