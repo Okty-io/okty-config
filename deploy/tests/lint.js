@@ -4,8 +4,6 @@ const path = require('path');
 const containersPath = './containers';
 const templatesPath = './templates';
 
-console.log('Lint containers files');
-
 const containers = fs.readdirSync(containersPath);
 containers.forEach(container => {
     const files = fs.readdirSync(`${containersPath}/${container}`);
@@ -14,8 +12,6 @@ containers.forEach(container => {
         lintFile(currentFile)
     });
 });
-
-console.log('Lint templates files');
 
 const templates = fs.readdirSync(templatesPath);
 templates.forEach(template => {
