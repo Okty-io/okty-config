@@ -1,8 +1,11 @@
 language: node_js
 node_js: "8.10"
 
-script:
+before_script:
     - npm install
+
+script:
+    - node ./deploy/tests/lint.js
 
 before_deploy:
     - apt-get install python-pip
