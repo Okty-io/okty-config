@@ -34,7 +34,7 @@ for container in *; do
             --zip-file fileb://resolvers.zip \
             --runtime nodejs8.10 \
             --handler handler.handle \
-            --role arn:aws:iam::593664064329:role/service-role/ResolverRole \
+            --role arn:aws:iam::593664064329:role/lambda-travis \
             > /dev/null
     fi
 
