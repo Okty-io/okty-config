@@ -7,11 +7,8 @@ install:
     - pip install awscli
     - export PATH=$PATH:$HOME/.local/bin
 
-script:
-    - ./deploy/build.sh
-
 deploy:
     provider: script
-    script: ./deploy/upload.sh
+    script: ./deploy/build.sh
     on:
         branch: dev
