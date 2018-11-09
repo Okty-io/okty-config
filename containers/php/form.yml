@@ -56,6 +56,6 @@ config:
           'xdebug': 'XDebug'
           'xsl': 'XSL'
           'zend_test': 'Zend_Test'
-        base: PHP_EXTENSIONS
+        base: php_extensions
         destination: files
         value: ''

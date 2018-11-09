@@ -36,7 +36,7 @@ config:
       - id: max_upload
         label: 'Max upload size'
         type: input
-        base: MAX_UPLOAD_SIZE
+        base: max_upload_size
         destination: files
         value: '2M'
         validators:
@@ -45,12 +45,12 @@ config:
       - id: php
         label: 'PHP Container'
         type: select-container
-        base: PHP_CONTAINER_ID
+        base: php_container_link
         destination: files
         value: ''
       - id: index
         label: 'Subfolder of the index file'
         type: input
-        base: INDEX_SUBFOLDER
+        base: root_folder
         destination: files
         value: ''
