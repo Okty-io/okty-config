@@ -57,5 +57,5 @@ config:
           'xsl': 'XSL'
           'zend_test': 'Zend_Test'
         base: PHP_EXTENSIONS
-        destination: environment
+        destination: files
         value: ''
