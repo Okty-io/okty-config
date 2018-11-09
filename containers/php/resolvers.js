@@ -45,7 +45,7 @@ module.exports = {
 
         if (outputPecl) {
             cmd += `RUN pecl install ${outputPecl}\n`;
-            cmd += `RUN docker-php-ext-install ${outputPecl}\n`;
+            cmd += `RUN docker-php-ext-enable ${outputPecl}\n`;
         }
 
         if (outputDependencies) {
