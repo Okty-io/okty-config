@@ -43,13 +43,18 @@ module.exports = {
 
         let cmd = '';
 
-        if (pecl) {
+        if (outputPecl) {
             cmd += `RUN pecl install ${outputPecl}\n`;
             cmd += `RUN docker-php-ext-install ${outputPecl}\n`;
         }
 
-        cmd += `RUN apt-get update && apt-get install -y ${outputDependencies} && apt-get clean\n`;
-        cmd += `RUN docker-php-ext-install ${outputExtensions}\n`;
+        if (outputDependencies) {
+            cmd += `RUN apt-get update && apt-get install -y ${outputDependencies} && apt-get clean\n`;
+        }
+
+        if (outputExtensions) {
+            cmd += `RUN docker-php-ext-install ${outputExtensions}\n`;
+        }
 
         if (extensions.includes('gd')) {
             cmd += `RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include\n`;
@@ -58,3 +63,5 @@ module.exports = {
         return cmd;
     },
 };
+
+console.log(module.exports.php_extensions('dba,bcmath,calendar'));
