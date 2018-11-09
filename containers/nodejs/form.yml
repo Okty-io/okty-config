@@ -17,15 +17,15 @@ config:
                 label: 'Version'
                 type: select
                 source:
-                    'node:latest': 'latest'
-                    'node:10': '10'
-                    'node:8': '8'
-                    'node:alpine': 'alpine'
-                    'node:10-alpine': '10-alpine'
-                    'node:8-alpine': '8-alpine'
+                    'latest': 'latest'
+                    '10': '10'
+                    '8': '8'
+                    'alpine': 'alpine'
+                    '10-alpine': '10-alpine'
+                    '8-alpine': '8-alpine'
                 base: image
                 destination: version
-                value: node:latest
+                value: latest
                 validators:
                     required: true
             -   id: application
