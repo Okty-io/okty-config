@@ -1,28 +1,38 @@
 const yamlLint = require('yaml-lint');
 const fs = require('fs');
+const path = require('path');
+const containersPath = './containers';
+const templatesPath = './templates';
 
-let path = './';
-if (process.argv[2]) {
-    path = process.argv[2] + '/';
-}
+const containers = fs.readdirSync(containersPath);
+containers.forEach(container => {
+    const files = fs.readdirSync(`${containersPath}/${container}`);
+    files.forEach(file => lintFile(`${containersPath}/${container}/${file}`));
+});
 
-fs.readdir(path, (error, files) => {
-    if (error) {
-        console.error(error);
-        process.exit(1);
+const templates = fs.readdirSync(templatesPath);
+templates.forEach(template => lintFile(`${templatesPath}/${template}`));
+
+// Utils functions
+
+function lintFile(file) {
+    if (fs.lstatSync(file).isDirectory()) {
+        return;
     }
 
-    files.forEach(file => {
-        if (fs.lstatSync(path + file).isDirectory()) {
-            return;
-        }
+    const ext = path.extname(file);
+    if (ext !== '.yml' && ext !== '.yaml') {
+        return;
+    }
 
-        yamlLint.lintFile(path + file).then(() => {
-            console.log(file + ' is valid');
-        }).catch(error => {
-            console.error(error);
-            process.exit(1);
-        });
-    });
-});
+    yamlLint.lintFile(file)
+        .then(() => console.log(`${file} : Valid`))
+        .catch(error => handleLintError(file, error));
+}
+
+function handleLintError(file, error) {
+    console.error(`${file} : Invalid`);
+    console.error(error);
+    process.exit(1);
+}
 

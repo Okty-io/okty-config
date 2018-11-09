@@ -1,0 +1,11 @@
+docker:
+  image: 'php'
+  tag: '7.2-fpm'
+files:
+  - Dockerfile
+config:
+  Dockerfile:
+    output: docker/php
+    args:
+      php_extensions:
+        default: ''

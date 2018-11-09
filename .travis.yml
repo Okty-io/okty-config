@@ -1,7 +1,19 @@
 language: node_js
-node_js:
-- 9.10.1
-script:
-- node deploy/tests/lint.js ./config/containers
-- node deploy/tests/lint.js ./config/templates
+node_js: "8.10"
 
+before_script:
+    - npm install
+
+script:
+    - node ./deploy/tests/lint.js
+
+before_deploy:
+    - apt-get install python-pip
+    - pip install awscli
+    - export PATH=$PATH:$HOME/.local/bin
+
+deploy:
+    provider: script
+    script: ./deploy/build.sh
+    on:
+        branch: master

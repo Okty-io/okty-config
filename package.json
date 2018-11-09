@@ -2,20 +2,16 @@
   "name": "okty-config",
   "version": "1.0.0",
   "description": "The simplest application to create your docker projects.",
-  "main": "local/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Okty-io/okty-config.git"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "Laurent Bassin",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Okty-io/okty-config/issues"
   },
   "homepage": "https://github.com/Okty-io/okty-config#readme",
-  "scripts": {
-    "start": "nodemon ./local/index.js"
-  },
   "devDependencies": {},
   "dependencies": {
     "yaml-lint": "^1.2.4"
