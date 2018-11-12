@@ -9,7 +9,7 @@ config:
         type: input
         base: container_id
         destination: id
-        value: php
+        value: php-fpm
         validators:
           required: true
           regex: '^[a-z]+$'
