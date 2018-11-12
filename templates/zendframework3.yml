@@ -7,7 +7,7 @@ containers:
             general_port: 8080
             general_application: './'
             nginx_max_upload: 2M
-            nginx_php: php
+            nginx_php: php-fpm
             nginx_index: public
     -   image: 'php-fpm'
         config:
