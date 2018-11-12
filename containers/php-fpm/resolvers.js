@@ -6,14 +6,16 @@ module.exports = {
 
         const peclMapping = [
             'apcu',
-            'xdebug'
+            'xdebug',
+            'memcached'
         ];
 
         const packageMapping = [
             {ext: 'intl', value: 'libicu-dev'},
             {ext: 'soap', value: 'libicu-dev'},
             {ext: 'xsl', value: 'libxml2-dev'},
-            {ext: 'gd', value: 'libpng-dev libjpeg-dev'}
+            {ext: 'gd', value: 'libpng-dev libjpeg-dev'},
+            {ext: 'memcached', value: 'libmemcached-dev'}
         ];
 
         const dependencies = [];

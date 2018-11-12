@@ -1,0 +1,24 @@
+name: Memcached
+logo: "https://cdn.worldvectorlogo.com/logos/memcached.svg"
+config:
+- id: general
+  label: General
+  fields:
+  - id: name
+    label: "Container ID"
+    type: input
+    base: container_id
+    destination: id
+    value: memcached
+    validators:
+      required: true
+      regex: "^[a-z]+$"
+  - id: port
+    label: "Port used on the host machine"
+    type: input
+    base: "11211"
+    destination: ports
+    value: "11211"
+    validators:
+      required: true
+      numbers: { min: 0, max: 65535 }
