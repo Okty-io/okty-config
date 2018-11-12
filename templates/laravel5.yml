@@ -7,11 +7,11 @@ containers:
             general_port: 8080
             general_application: './'
             nginx_max_upload: 2M
-        nginx_php: php-fpm
+            nginx_php: 'php-fpm'
             nginx_index: public
     -   image: 'php-fpm'
         config:
-            general_name: php-fpm
+            general_name: 'php-fpm'
             general_version: '7.2-fpm'
             general_application: './'
             php_extensions: 'pdo_mysql,intl,opcache'
