@@ -29,4 +29,6 @@ containers:
             connection_database_password: s3cr3t
             connection_database_root: yes
     -   image: 'composer'
-        config: ~
+        config:
+            general_name: composer
+            general_path: './'
