@@ -1,12 +1,13 @@
-language: node_js
-node_js: "8.10"
-sudo: true
+sudo: required
+language: python
+services:
+    - docker
 
 before_script:
-    - npm install
+    - docker run -v $PWD:/app -w /app node:11-alpine npm install
 
 script:
-    - node ./deploy/tests/lint.js
+    - docker run -v $PWD:/app -w /app node:11-alpine node ./deploy/tests/lint.js
 
 before_deploy:
     - apt-get install python-pip
