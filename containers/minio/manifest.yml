@@ -1,0 +1,3 @@
+docker:
+    image: minio/minio
+    tag: latest
