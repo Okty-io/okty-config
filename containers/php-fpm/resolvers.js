@@ -63,5 +63,3 @@ module.exports = {
         return cmd;
     },
 };
-
-console.log(module.exports.php_extensions('dba,bcmath,calendar'));
