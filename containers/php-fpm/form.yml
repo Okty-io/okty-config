@@ -44,6 +44,7 @@ config:
           'gettext': 'GetText'
           'intl': 'Intl'
           'mysqli': 'MySQLi'
+          'memcached': 'Memcached'
           'opcache': 'OPCache'
           'pcntl': 'PCNTL'
           'pdo_mysql': 'PDO Mysql'
