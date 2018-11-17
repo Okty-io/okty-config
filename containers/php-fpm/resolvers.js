@@ -25,6 +25,11 @@ module.exports = {
         for (let ext of value.split(',')) {
             ext = ext.trim();
 
+            const packageRequired = packageMapping.find((element) => element.ext === ext);
+            if (packageRequired) {
+                dependencies.push(packageRequired.value);
+            }
+
             if (peclMapping.includes(ext)) {
                 pecl.push(ext);
 
@@ -32,11 +37,6 @@ module.exports = {
             }
 
             extensions.push(ext);
-
-            const packageRequired = packageMapping.find((element) => element.ext === ext);
-            if (packageRequired) {
-                dependencies.push(packageRequired.value);
-            }
         }
 
         const outputPecl = pecl.join(' ');
@@ -45,13 +45,13 @@ module.exports = {
 
         let cmd = '';
 
+        if (outputDependencies) {
+            cmd += `RUN apt-get update && apt-get install -y ${outputDependencies} && apt-get clean\n`;
+        }
+
         if (outputPecl) {
             cmd += `RUN pecl install ${outputPecl}\n`;
             cmd += `RUN docker-php-ext-enable ${outputPecl}\n`;
-        }
-
-        if (outputDependencies) {
-            cmd += `RUN apt-get update && apt-get install -y ${outputDependencies} && apt-get clean\n`;
         }
 
         if (outputExtensions) {
