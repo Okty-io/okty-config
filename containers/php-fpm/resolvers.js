@@ -15,7 +15,7 @@ module.exports = {
             {ext: 'soap', value: 'libicu-dev'},
             {ext: 'xsl', value: 'libxml2-dev'},
             {ext: 'gd', value: 'libpng-dev libjpeg-dev'},
-            {ext: 'memcached', value: 'libmemcached-dev'}
+            {ext: 'memcached', value: 'libmemcached-dev zlib1g-dev'}
         ];
 
         const dependencies = [];
