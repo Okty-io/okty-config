@@ -1,0 +1,38 @@
+name: 'Magento 2'
+logo: 'https://cdn.worldvectorlogo.com/logos/magento-2.svg'
+containers:
+    -   image: 'php-fpm'
+        config:
+            general_name: 'php-fpm'
+            general_version: '7.1-fpm'
+            general_application: './'
+            php_extensions: 'bcmath,gd,intl,pdo_mysql,soap,xsl,opcache'
+    -   image: 'nginx'
+        config:
+            general_name: nginx
+            general_port: 8080
+            general_application: './'
+            nginx_max_upload: 2M
+            nginx_php: 'php-fpm'
+            nginx_index: pub
+    -   image: 'adminer'
+        config:
+            general_name: adminer
+            general_port: 8081
+    -   image: 'mysql'
+        config:
+            general_name: mysql
+            general_port: 3306
+            general_application: './docker/database'
+            connection_database_name: docker
+            connection_database_user: docker
+            connection_database_password: s3cr3t
+            connection_database_root: yes
+    -   image: 'composer'
+        config:
+            general_name: composer
+            general_path: './'
+    -   image: 'mailcatcher'
+        config:
+            general_name: 'mailcatcher'
+            general_port: '1080'
