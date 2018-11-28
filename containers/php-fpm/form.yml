@@ -28,7 +28,7 @@ config:
         source:
           '7.1-fpm': '7.1'
           '7.2-fpm': '7.2'
-  - id: php-fpm
+  - id: php
     label: PHP
     fields:
       - id: extensions
