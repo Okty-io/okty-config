@@ -1,0 +1,19 @@
+name: 'Angular'
+logo: 'https://angular.io/assets/images/logos/angular/angular.png'
+containers:
+  -   image: 'nginx'
+      config:
+        general_name: nginx
+        general_port: 8080
+        general_application: './'
+        nginx_max_upload: 2M
+        nginx_php: ''
+        nginx_index: public
+  -   image: 'node'
+      config:
+        general_name: 'node'
+        general_image: 'latest'
+        general_application: './'
+        general_workingdir: '/home/node/app'
+        entrypoint_point: 3000
+        entrypoint_command: 'npm install && npm start'
