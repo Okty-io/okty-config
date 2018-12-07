@@ -9,9 +9,9 @@ containers:
         nginx_max_upload: 2M
         nginx_php: ''
         nginx_index: public
-  -   image: 'node'
+  -   image: 'nodejs'
       config:
-        general_name: 'node'
+        general_name: 'nodejs'
         general_image: 'latest'
         general_application: './'
         general_workingdir: '/home/node/app'
