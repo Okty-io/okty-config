@@ -4,7 +4,7 @@ config:
     -   id: general
         label: General
         fields:
-            -   id: name
+            -   id: id
                 label: 'Container ID'
                 type: input
                 base: container_id

@@ -66,7 +66,7 @@ Before creating any configuration for your container, you have to had the contai
 If this field is missing Okty won't be able to work properly.
 ```yml
 - 
-  id: name 
+  id: id 
   label: "Container ID"
   type: input
   base: container_id
@@ -79,7 +79,7 @@ If this field is missing Okty won't be able to work properly.
 
 Okty may handle three types of configuration for your container :
 - Volumes
-- Ports
+- Portsname
 - Environment
 
 For each type, those three fields are required :
