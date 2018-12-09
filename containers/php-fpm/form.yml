@@ -23,7 +23,7 @@ config:
                     required: true
             -   id: version
                 label: 'Version'
-                type: 'select'
+                type: 'select-single'
                 destination: version
                 source:
                     '7.1-fpm': '7.1'
