@@ -151,7 +151,7 @@ This input allows the user to select multiple value from a defined source.
 You have to add these lines to your field declaration.  
 Output will be a string of all values separated by a ";"
 ```yml
-type: multi-select 
+type: select-multiple 
 source: 
   "value1": "Label 01"
   "value2": "Label 02"
@@ -165,7 +165,7 @@ There is an example [right there](https://github.com/lbassin/okty-config/blob/ma
 This input works exactly like the multi-select but user may only choose one value.  
 Output will be a string with the value of the selected item.
 ```yml
-type: select 
+type: select-single 
 source: 
   "value1": "Label 01"
   "value2": "Label 02"

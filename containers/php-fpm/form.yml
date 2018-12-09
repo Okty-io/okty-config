@@ -33,7 +33,7 @@ config:
     fields:
       - id: extensions
         label: 'PHP Extensions'
-        type: multi-select
+        type: select-multiple
         source:
           'apcu': 'APCu'
           'bcmath': 'BCMath'

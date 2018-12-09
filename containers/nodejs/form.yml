@@ -15,7 +15,7 @@ config:
                     regex: '^[a-z]+$'
             -   id: image
                 label: 'Version'
-                type: select
+                type: select-single
                 source:
                     'latest': 'latest'
                     '10': '10'
