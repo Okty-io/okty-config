@@ -39,7 +39,7 @@ config:
             -   id: workingdir
                 type: hidden
                 base: 'working_dir'
-                destination: docker-compose
+                destination: compose
                 value: '/home/node/app'
     -   id: entrypoint
         label: Entrypoint
@@ -57,7 +57,7 @@ config:
                 label: 'Command to execute'
                 type: input
                 base: command
-                destination: docker-compose
+                destination: compose
                 value: 'npm install && npm start'
                 validators:
                     required: true
