@@ -12,7 +12,7 @@ config:
                 value: php-fpm
                 validators:
                     required: true
-                    regex: '^[a-z]+$'
+                    regex: '^[a-zA-Z]+(-)?[a-zA-Z]+$'
             -   id: application
                 label: 'Local path of the application'
                 type: input

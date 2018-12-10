@@ -12,7 +12,7 @@ config:
                 value: node
                 validators:
                     required: true
-                    regex: '^[a-z]+$'
+                    regex: '^[a-zA-Z]+(-)?[a-zA-Z]+$'
             -   id: image
                 label: 'Version'
                 type: select-single

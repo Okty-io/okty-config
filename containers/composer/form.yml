@@ -12,7 +12,7 @@ config:
                 value: composer
                 validators:
                     required: true
-                    regex: '^[a-z]+$'
+                    regex: '^[a-zA-Z]+(-)?[a-zA-Z]+$'
             -   id: path
                 label: 'Local path your project files'
                 type: input

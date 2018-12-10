@@ -12,7 +12,7 @@ config:
                 value: mariadb
                 validators:
                     required: true
-                    regex: '^[a-z]+$'
+                    regex: '^[a-zA-Z]+(-)?[a-zA-Z]+$'
             -   id: port
                 label: 'MariaDB port used on the host machine'
                 type: input
