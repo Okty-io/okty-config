@@ -34,7 +34,7 @@ config:
                 label: "Access key"
                 type: input
                 base: MINIO_ACCESS_KEY
-                destination: environment
+                destination: environments
                 value: "AKIAIOSFODNN7EXAMPLE"
                 validators:
                     required: true
@@ -42,7 +42,7 @@ config:
                 label: "Secret key"
                 type: input
                 base: MINIO_SECRET_KEY
-                destination: environment
+                destination: environments
                 value: "L2FzU1oj1gvEabznwFBG773yrDoFT6TJKRd8bRLz"
                 validators:
                     required: true

@@ -36,7 +36,7 @@ config:
                 label: 'Database Name'
                 type: input
                 base: MYSQL_DATABASE
-                destination: environment
+                destination: environments
                 value: 'docker'
                 validators:
                     required: true
@@ -44,7 +44,7 @@ config:
                 label: 'Mysql User'
                 type: input
                 base: MYSQL_USER
-                destination: environment
+                destination: environments
                 value: 'user'
                 validators:
                     required: true
@@ -52,14 +52,14 @@ config:
                 label: 'Mysql Password'
                 type: input
                 base: MYSQL_PASSWORD
-                destination: environment
+                destination: environments
                 value: 'password'
                 validators:
                     required: true
             -   id: database_root
                 type: hidden
                 base: MYSQL_RANDOM_ROOT_PASSWORD
-                destination: environment
+                destination: environments
                 value: 'yes'
                 validators:
                     required: true

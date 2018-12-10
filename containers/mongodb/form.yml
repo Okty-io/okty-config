@@ -36,7 +36,7 @@ config:
                 label: 'Database Name'
                 type: input
                 base: MONGO_INITDB_DATABASE
-                destination: environment
+                destination: environments
                 value: 'docker'
                 validators:
                     required: true
@@ -44,7 +44,7 @@ config:
                 label: 'User'
                 type: input
                 base: MONGO_INITDB_ROOT_USERNAME
-                destination: environment
+                destination: environments
                 value: 'user'
                 validators:
                     required: true
@@ -52,7 +52,7 @@ config:
                 label: 'Password'
                 type: input
                 base: MONGO_INITDB_ROOT_PASSWORD
-                destination: environment
+                destination: environments
                 value: 'password'
                 validators:
                     required: true
