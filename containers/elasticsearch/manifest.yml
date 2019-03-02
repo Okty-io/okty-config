@@ -1,0 +1,3 @@
+docker:
+  image: 'docker.elastic.co/elasticsearch/elasticsearch'
+  tag: '6.6.0'
