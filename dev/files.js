@@ -9,6 +9,6 @@ app.use(cors());
 app.use('/containers', containersRouter);
 app.use('/templates', templatesRouter);
 
-app.listen(3000, () => {
-    console.log('Listening on 3000');
+app.listen(80, () => {
+    console.log('Listening on 80');
 });
