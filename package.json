@@ -12,7 +12,10 @@
     "url": "https://github.com/Okty-io/okty-config/issues"
   },
   "homepage": "https://github.com/Okty-io/okty-config#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  },
   "dependencies": {
     "yaml-lint": "^1.2.4"
   }
