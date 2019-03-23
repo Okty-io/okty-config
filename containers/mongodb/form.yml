@@ -12,23 +12,15 @@ config:
         value: mongo
         validators:
           required: true
-          regex: '^[a-z]+$'
+          regex: '^[a-z]+(-)?[a-z]+$'
       - id: port
         label: 'Port used on the host machine'
         type: input
-        base: '3306'
+        base: '27017'
         destination: ports
-        value: '3306'
+        value: ''
         validators:
           numbers: { min: 0, max: 65535 }
-      - id: application
-        label: 'Local path of database folder'
-        type: input
-        base: '/data/db'
-        destination: volumes
-        value: './docker/database'
-        validators:
-          required: true
   - id: connection
     label: Connection
     fields:
@@ -36,7 +28,7 @@ config:
         label: 'Database Name'
         type: input
         base: MONGO_INITDB_DATABASE
-        destination: environment
+        destination: environments
         value: 'docker'
         validators:
           required: true
@@ -44,7 +36,7 @@ config:
         label: 'User'
         type: input
         base: MONGO_INITDB_ROOT_USERNAME
-        destination: environment
+        destination: environments
         value: 'user'
         validators:
           required: true
@@ -52,7 +44,7 @@ config:
         label: 'Password'
         type: input
         base: MONGO_INITDB_ROOT_PASSWORD
-        destination: environment
+        destination: environments
         value: 'password'
         validators:
           required: true

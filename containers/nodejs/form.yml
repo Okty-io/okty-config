@@ -1,63 +1,63 @@
 name: 'NodeJS'
 logo: 'https://cdn.worldvectorlogo.com/logos/nodejs-1.svg'
 config:
-    -   id: general
-        label: General
-        fields:
-            -   id: name
-                label: 'Container ID'
-                type: input
-                base: container_id
-                destination: id
-                value: node
-                validators:
-                    required: true
-                    regex: '^[a-z]+$'
-            -   id: image
-                label: 'Version'
-                type: select
-                source:
-                    'latest': 'latest'
-                    '10': '10'
-                    '8': '8'
-                    'alpine': 'alpine'
-                    '10-alpine': '10-alpine'
-                    '8-alpine': '8-alpine'
-                base: image
-                destination: version
-                value: latest
-                validators:
-                    required: true
-            -   id: application
-                label: 'Local path of the application'
-                type: input
-                base: '/home/node/app'
-                destination: volumes
-                value: './'
-                validators:
-                    required: true
-            -   id: workingdir
-                type: hidden
-                base: 'working_dir'
-                destination: docker-compose
-                value: '/home/node/app'
-    -   id: entrypoint
-        label: Entrypoint
-        fields:
-            -   id: port
-                label: 'Port used on the host machine'
-                type: input
-                base: '3000'
-                destination: ports
-                value: '3000'
-                validators:
-                    required: true
-                    numbers: { min: 0, max: 65535 }
-            -   id: command
-                label: 'Command to execute'
-                type: input
-                base: command
-                destination: docker-compose
-                value: 'npm install && npm start'
-                validators:
-                    required: true
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: 'Container ID'
+        type: input
+        base: container_id
+        destination: id
+        value: node
+        validators:
+          required: true
+          regex: '^[a-z]+(-)?[a-z]+$'
+      - id: image
+        label: 'Version'
+        type: 'select-single'
+        source:
+          'latest': 'latest'
+          '10': '10'
+          '8': '8'
+          'alpine': 'alpine'
+          '10-alpine': '10-alpine'
+          '8-alpine': '8-alpine'
+        base: image
+        destination: version
+        value: latest
+        validators:
+          required: true
+      - id: application
+        label: 'Local path of the application'
+        type: input
+        base: '/home/node/app'
+        destination: volumes
+        value: './'
+        validators:
+          required: true
+      - id: workingdir
+        type: hidden
+        base: 'working_dir'
+        destination: compose
+        value: '/home/node/app'
+  - id: entrypoint
+    label: Entrypoint
+    fields:
+      - id: port
+        label: 'Port used on the host machine'
+        type: input
+        base: '3000'
+        destination: ports
+        value: '3000'
+        validators:
+          required: true
+          numbers: { min: 0, max: 65535 }
+      - id: command
+        label: 'Command to execute'
+        type: input
+        base: command
+        destination: compose
+        value: 'npm install && npm start'
+        validators:
+          required: true
