@@ -30,7 +30,7 @@ config:
         validators:
           numbers: { min: 0, max: 65535 }
       - id: port_node
-        label: 'Elasticsearch port used for node communication'
+        label: 'Local port for node communication'
         type: input
         base: '9300'
         destination: ports
