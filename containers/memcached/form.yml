@@ -12,13 +12,13 @@ config:
     value: memcached
     validators:
       required: true
-      regex: "^[a-z]+$"
+      regex: "^[a-z]+(-)?[a-z]+$"
   - id: port
     label: "Port used on the host machine"
     type: input
     base: "11211"
     destination: ports
-    value: "11211"
+    value: ""
     validators:
-      required: true
+#      required: true
       numbers: { min: 0, max: 65535 }

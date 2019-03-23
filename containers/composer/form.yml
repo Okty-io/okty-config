@@ -1,23 +1,29 @@
 name: 'Composer'
 logo: 'https://cdn.worldvectorlogo.com/logos/composer.svg'
 config:
-    -   id: general
-        label: General
-        fields:
-            -   id: name
-                label: 'Container ID'
-                type: input
-                base: container_id
-                destination: id
-                value: composer
-                validators:
-                    required: true
-                    regex: '^[a-z]+$'
-            -   id: path
-                label: 'Local path your project files'
-                type: input
-                base: '/app'
-                destination: volumes
-                value: './'
-                validators:
-                    required: true
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: 'Container ID'
+        type: input
+        base: container_id
+        destination: id
+        value: composer
+        validators:
+          required: true
+          regex: '^[a-z]+(-)?[a-z]+$'
+      - id: path
+        label: 'Local path your project files'
+        type: input
+        base: '/app'
+        destination: volumes
+        value: './'
+        validators:
+          required: true
+      - id: command
+        label: 'Default command'
+        type: input
+        base: 'command'
+        destination: 'compose'
+        value: 'install'

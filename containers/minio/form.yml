@@ -1,48 +1,48 @@
 name: Minio - S3
 logo: "https://blog.alexellis.io/content/images/2017/01/minio_light_cir_sm-1.png"
 config:
-    -   id: general
-        label: General
-        fields:
-            -   id: name
-                label: "Container ID"
-                type: input
-                base: container_id
-                destination: id
-                value: storage
-                validators:
-                    required: true
-                    regex: "^[a-z]+$"
-            -   id: port
-                label: "Port used on the host machine"
-                type: input
-                base: "9000"
-                destination: ports
-                value: "9000"
-                validators:
-                    required: true
-                    numbers: { min: 0, max: 65535 }
-            -   id: command
-                type: hidden
-                base: command
-                destination: docker-compose
-                value: 'server /data'
-    -   id: connection
-        label: Connection
-        fields:
-            -   id: publickey
-                label: "Access key"
-                type: input
-                base: MINIO_ACCESS_KEY
-                destination: environment
-                value: "AKIAIOSFODNN7EXAMPLE"
-                validators:
-                    required: true
-            -   id: secretkey
-                label: "Secret key"
-                type: input
-                base: MINIO_SECRET_KEY
-                destination: environment
-                value: "L2FzU1oj1gvEabznwFBG773yrDoFT6TJKRd8bRLz"
-                validators:
-                    required: true
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: "Container ID"
+        type: input
+        base: container_id
+        destination: id
+        value: storage
+        validators:
+          required: true
+          regex: "^[a-z]+(-)?[a-z]+$"
+      - id: port
+        label: "Port used on the host machine"
+        type: input
+        base: "9000"
+        destination: ports
+        value: "9000"
+        validators:
+          required: true
+          numbers: { min: 0, max: 65535 }
+      - id: command
+        type: hidden
+        base: command
+        destination: docker-compose
+        value: 'server /data'
+  - id: connection
+    label: Connection
+    fields:
+      - id: publickey
+        label: "Access key"
+        type: input
+        base: MINIO_ACCESS_KEY
+        destination: environments
+        value: "AKIAIOSFODNN7EXAMPLE"
+        validators:
+          required: true
+      - id: secretkey
+        label: "Secret key"
+        type: input
+        base: MINIO_SECRET_KEY
+        destination: environments
+        value: "L2FzU1oj1gvEabznwFBG773yrDoFT6TJKRd8bRLz"
+        validators:
+          required: true

@@ -1,5 +1,5 @@
 docker:
-  build: 'docker/nginx/'
+  build: 'docker/nginx'
 files:
   - Dockerfile
   - default.conf
