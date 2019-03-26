@@ -32,3 +32,4 @@ containers:
       config:
         general_name: composer
         general_path: './'
+        general_command: 'install'

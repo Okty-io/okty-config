@@ -1,3 +1,3 @@
 docker:
   image: redis
-  tag: latest
+  tag: 5.0.4

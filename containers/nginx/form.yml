@@ -12,13 +12,13 @@ config:
         value: nginx
         validators:
           required: true
-          regex: '^[a-z]+$'
+          regex: '^[a-z]+(-)?[a-z]+$'
       - id: port
         label: 'Port used on the host machine'
         type: input
         base: '80'
         destination: ports
-        value: '8080'
+        value: '80'
         validators:
           required: true
           numbers: { min: 0, max: 65535 }

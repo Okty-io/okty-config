@@ -12,7 +12,17 @@ config:
         value: php-fpm
         validators:
           required: true
-          regex: '^[a-z]+$'
+          regex: '^[a-z]+(-)?[a-z]+$'
+      - id: version
+        label: 'Version'
+        type: 'select-single'
+        destination: version
+        source:
+          '7.1-fpm': '7.1'
+          '7.2-fpm': '7.2'
+          '7.3-fpm': '7.3'
+        validators:
+          required: true
       - id: application
         label: 'Local path of the application'
         type: input
@@ -21,20 +31,12 @@ config:
         value: './'
         validators:
           required: true
-      - id: version
-        label: 'Version'
-        type: 'select'
-        destination: version
-        source:
-          '7.1-fpm': '7.1'
-          '7.2-fpm': '7.2'
-          '7.3-fpm': '7.3'
   - id: php
     label: PHP
     fields:
       - id: extensions
         label: 'PHP Extensions'
-        type: multi-select
+        type: select-multiple
         source:
           'apcu': 'APCu'
           'bcmath': 'BCMath'

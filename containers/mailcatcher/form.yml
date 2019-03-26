@@ -12,9 +12,9 @@ config:
         value: mailcatcher
         validators:
           required: true
-          regex: '^[a-z]+$'
+          regex: '^[a-z]+(-)?[a-z]+$'
       - id: port
-        label: 'Port used to access the webmail from the host machine'
+        label: 'Port used to access the webmail from the host'
         type: input
         base: '1080'
         destination: ports

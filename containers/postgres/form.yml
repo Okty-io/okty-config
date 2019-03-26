@@ -12,27 +12,19 @@ config:
         value: postgresql
         validators:
           required: true
-          regex: '^[a-z]+$'
+          regex: '^[a-z]+(-)?[a-z]+$'
       - id: port
         label: 'PostgreSQL port used on the host machine'
         type: input
         base: '5432'
         destination: ports
-        value: '5432'
+        value: ''
         validators:
           numbers: { min: 0, max: 65535 }
-      - id: application
-        label: 'Local path of database folder'
-        type: input
-        base: '/var/lib/postgresql/data/pgdata'
-        destination: volumes
-        value: './docker/database'
-        validators:
-          required: true
       - id: pgdata
         type: hidden
         base: PGDATA
-        destination: environment
+        destination: environments
         value: '/var/lib/postgresql/data/pgdata'
   - id: connection
     label: Connection
@@ -41,7 +33,7 @@ config:
         label: 'Database Name'
         type: input
         base: POSTGRES_DB
-        destination: environment
+        destination: environments
         value: 'docker'
         validators:
           required: true
@@ -49,7 +41,7 @@ config:
         label: User
         type: input
         base: POSTGRES_USER
-        destination: environment
+        destination: environments
         value: 'user'
         validators:
           required: true
@@ -57,7 +49,7 @@ config:
         label: Password
         type: input
         base: POSTGRES_PASSWORD
-        destination: environment
+        destination: environments
         value: 'password'
         validators:
           required: true

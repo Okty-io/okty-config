@@ -12,23 +12,15 @@ config:
         value: mysql
         validators:
           required: true
-          regex: '^[a-z]+$'
+          regex: '^[a-z]+(-)?[a-z]+$'
       - id: port
         label: 'Mysql port used on the host machine'
         type: input
         base: '3306'
         destination: ports
-        value: '3306'
+        value: ''
         validators:
           numbers: { min: 0, max: 65535 }
-      - id: application
-        label: 'Local path of database folder'
-        type: input
-        base: '/var/lib/mysql'
-        destination: volumes
-        value: './docker/database'
-        validators:
-          required: true
   - id: connection
     label: Connection
     fields:
@@ -36,7 +28,7 @@ config:
         label: 'Database Name'
         type: input
         base: MYSQL_DATABASE
-        destination: environment
+        destination: environments
         value: 'docker'
         validators:
           required: true
@@ -44,7 +36,7 @@ config:
         label: 'Mysql User'
         type: input
         base: MYSQL_USER
-        destination: environment
+        destination: environments
         value: 'user'
         validators:
           required: true
@@ -52,14 +44,14 @@ config:
         label: 'Mysql Password'
         type: input
         base: MYSQL_PASSWORD
-        destination: environment
+        destination: environments
         value: 'password'
         validators:
           required: true
       - id: database_root
         type: hidden
         base: MYSQL_RANDOM_ROOT_PASSWORD
-        destination: environment
+        destination: environments
         value: 'yes'
         validators:
           required: true

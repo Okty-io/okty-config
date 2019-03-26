@@ -1,24 +1,23 @@
 name: Redis
 logo: "https://cdn.worldvectorlogo.com/logos/redis.svg"
 config:
-- id: general
-  label: General
-  fields:
-    - id: name
-      label: "Container ID"
-      type: input
-      base: container_id
-      destination: id
-      value: redis
-      validators:
-        required: true
-        regex: "^[a-z]+$"
-    - id: port
-      label: "Port used on the host machine"
-      type: input
-      base: "6379"
-      destination: ports
-      value: "6379"
-      validators:
-        required: true
-        numbers: { min: 0, max: 65535 }
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: "Container ID"
+        type: input
+        base: container_id
+        destination: id
+        value: redis
+        validators:
+          required: true
+          regex: "^[a-z]+(-)?[a-z]+$"
+      - id: port
+        label: "Port used on the host machine"
+        type: input
+        base: "6379"
+        destination: ports
+        value: ""
+        validators:
+          numbers: { min: 0, max: 65535 }

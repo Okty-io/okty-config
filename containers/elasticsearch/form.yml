@@ -12,35 +12,35 @@ config:
         value: elasticsearch
         validators:
           required: true
-          regex: '^[a-z]+$'
-      - id: port_api
-        label: 'Elasticsearch port used by Rest API'
-        type: input
-        base: '9200'
-        destination: ports
-        value: '9200'
-        validators:
-          numbers: { min: 0, max: 65535 }
-      - id: port_node
-        label: 'Elasticsearch port used for node communication'
-        type: input
-        base: '9300'
-        destination: ports
-        value: '9300'
-        validators:
-          numbers: { min: 0, max: 65535 }
+          regex: '^[a-z]+(-)?[a-z]+$'
       - id: application
         label: 'Local path of datastore folder'
         type: input
         base: '/usr/share/elasticsearch/data'
         destination: volumes
-        value: 'elasticdata'
+        value: './elasticdata'
         validators:
           required: true
+      - id: port_api
+        label: 'Elasticsearch port used by Rest API'
+        type: input
+        base: '9200'
+        destination: ports
+        value: ''
+        validators:
+          numbers: { min: 0, max: 65535 }
+      - id: port_node
+        label: 'Local port for node communication'
+        type: input
+        base: '9300'
+        destination: ports
+        value: ''
+        validators:
+          numbers: { min: 0, max: 65535 }
       - id: env_mode
         type: hidden
         base: "discovery.type"
-        destination: environment
+        destination: environments
         value: 'single-node'
         validators:
           required: true
