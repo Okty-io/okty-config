@@ -10,6 +10,12 @@ app.post('/', (req, res) => {
     const { container, resolver, args } = req.body;
 
     const functions = require(`../containers/${container}/resolvers.js`);
+
+    if (!resolver || typeof functions[resolver] !== 'function') {
+        res.status(400).send();
+        return;
+    }
+
     const output = functions[resolver](args);
 
     res.send(output);
