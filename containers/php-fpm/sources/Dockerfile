@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM php:{{php_version}}
 
 {{php_extensions}}
 
