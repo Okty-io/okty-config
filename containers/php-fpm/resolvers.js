@@ -64,4 +64,7 @@ module.exports = {
 
         return cmd;
     },
+    php_version: function (value) {
+        return value;
+    }
 };
