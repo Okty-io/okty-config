@@ -22,7 +22,6 @@ containers:
     -   image: 'mariadb'
         config:
             general_name: mariadb
-            general_port: 3306
             general_application: './docker/database'
             connection_database_name: docker
             connection_database_user: docker
