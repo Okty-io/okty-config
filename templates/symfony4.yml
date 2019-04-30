@@ -1,35 +1,34 @@
 name: 'Symfony 4'
 logo: 'https://cdn.worldvectorlogo.com/logos/symfony.svg'
 containers:
-  -   image: 'nginx'
-      config:
-        general_name: nginx
-        general_port: 8080
-        general_application: './'
-        nginx_max_upload: 2M
-        nginx_php: 'php-fpm'
-        nginx_index: public
-  -   image: 'php-fpm'
-      config:
-        general_name: 'php-fpm'
-        general_version: '7.2-fpm'
-        general_application: './'
-        php_extensions: 'pdo_mysql,intl,opcache,apcu,xdebug'
-  -   image: 'adminer'
-      config:
-        general_name: adminer
-        general_port: 8081
-  -   image: 'mariadb'
-      config:
-        general_name: mariadb
-        general_port: 3306
-        general_application: './docker/database'
-        connection_database_name: docker
-        connection_database_user: docker
-        connection_database_password: s3cr3t
-        connection_database_root: yes
-  -   image: 'composer'
-      config:
-        general_name: composer
-        general_path: './'
-        general_command: 'install'
+    -   image: 'nginx'
+        config:
+            general_name: nginx
+            general_port: 8080
+            general_application: './'
+            nginx_max_upload: 2M
+            nginx_php: 'php-fpm'
+            nginx_index: public
+    -   image: 'php-fpm'
+        config:
+            general_name: 'php-fpm'
+            general_version: '7.2-fpm'
+            general_application: './'
+            php_extensions: 'pdo_mysql,intl,opcache,apcu,xdebug'
+    -   image: 'adminer'
+        config:
+            general_name: adminer
+            general_port: 8081
+    -   image: 'mariadb'
+        config:
+            general_name: mariadb
+            general_application: './docker/database'
+            connection_database_name: docker
+            connection_database_user: docker
+            connection_database_password: s3cr3t
+            connection_database_root: yes
+    -   image: 'composer'
+        config:
+            general_name: composer
+            general_path: './'
+            general_command: 'install'
