@@ -1,0 +1,11 @@
+name: 'Vue.js'
+logo: 'https://cdn.worldvectorlogo.com/logos/vue-9.svg'
+containers:
+    -   image: 'nodejs'
+        config:
+            general_name: 'nodejs'
+            general_image: 'latest'
+            general_application: './'
+            general_workingdir: '/home/node/app'
+            entrypoint_port: 4200
+            entrypoint_command: 'npm install && npm install -g @vue/cli && ./node_modules/.bin/ng serve --host 0.0.0.0'
