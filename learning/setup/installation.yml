@@ -1,0 +1,9 @@
+label:
+  fr_FR: "Installation"
+  en_US: "Installation"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~

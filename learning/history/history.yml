@@ -1,0 +1,50 @@
+label:
+  fr_FR: "Historique"
+  en_US: "History"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~
+
+  - text:
+      fr_FR: step_02_fr
+      en_US: step_02_en
+    action: ~
+
+  - text:
+      fr_FR: step_03_fr
+      en_US: step_04_en
+    action:
+      type: qcm
+      config:
+        questions:
+          - title:
+              fr_FR: "Which one of these color is the best ?"
+              en_US: "Quelle couleur est la meilleure ?"
+            questions:
+              fr_FR:
+                - Bleu
+                - Rouge
+                - Vert
+              en_US:
+                - Blue
+                - Red
+                - Green
+            responses: [2]
+          - title:
+              fr_FR: "Quelle phrase est vrai ?"
+              en_US: "Which of these statements are true ?"
+            questions:
+              fr_FR:
+                - 'Il y a de la neige en été'
+                - 'Okty est une super application'
+                - 'Faux'
+                - 'Youtube est un site web'
+              en_US:
+                - 'There is snow during summer'
+                - 'Okty is a great application'
+                - 'False'
+                - 'Youtube is a website'
+            response: [2, 4]
