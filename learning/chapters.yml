@@ -1,17 +1,17 @@
 chapters:
   history:
     name:
-      - fr_FR: "Historique"
-      - en_US: "History"
+      fr_FR: "Historique"
+      en_US: "History"
     lessons:
       - history
       - what_is_it
       - for_who_and_why
 
-  - setup:
+  setup:
       name:
-        - fr_FR: "Setup & Concepts"
-        - en_US: "Setup & Concepts"
+        fr_FR: "Setup & Concepts"
+        en_US: "Setup & Concepts"
       lessons:
         - definition
         - container_vm

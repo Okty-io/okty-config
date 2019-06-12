@@ -1,1 +1,1 @@
-Lorem ipsum
+What is it - Step 02 - FR

@@ -1,4 +1,8 @@
-label:
+id:
+  fr_FR: 6657b341-ace7-4384-96fa-70fc1a28112f
+  en_US: 5408fd92-db03-4d2f-952a-490f154d76b3
+
+name:
   fr_FR: "Historique"
   en_US: "History"
 
@@ -15,7 +19,7 @@ steps:
 
   - text:
       fr_FR: step_03_fr
-      en_US: step_04_en
+      en_US: step_03_en
     action:
       type: qcm
       config:
@@ -32,7 +36,7 @@ steps:
                 - Blue
                 - Red
                 - Green
-            responses: [2]
+            responses: [1]
           - title:
               fr_FR: "Quelle phrase est vrai ?"
               en_US: "Which of these statements are true ?"
@@ -47,4 +51,4 @@ steps:
                 - 'Okty is a great application'
                 - 'False'
                 - 'Youtube is a website'
-            response: [2, 4]
+            responses: [2, 4]

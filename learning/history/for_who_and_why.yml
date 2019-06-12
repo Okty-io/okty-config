@@ -1,4 +1,8 @@
-label:
+id:
+  fr_FR: 75075914-01f4-4e11-ac2b-49d4997f86b5
+  en_US: 82ffa0a0-7599-41b4-a0d9-a88dfd3856d1
+
+name:
   fr_FR: "Pour qui et pourquoi ?"
   en_US: "For who and why ?"
 
@@ -15,5 +19,5 @@ steps:
 
   - text:
       fr_FR: step_03_fr
-      en_US: step_04_en
+      en_US: step_03_en
     action: ~
