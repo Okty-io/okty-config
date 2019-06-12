@@ -1,4 +1,8 @@
-label:
+id:
+  fr_FR: 81dd82fc-fb6c-496f-8c45-097274bcad69
+  en_US: d3e78fc8-4361-43b3-ba02-e6b7d5cc94cb
+
+name:
   fr_FR: "Installation"
   en_US: "Installation"
 
