@@ -6,7 +6,9 @@ chapters:
     lessons:
       - history
       - what_is_it
-      - for_who_and_why
+      - for_whom
+      - when_use_it
+      - when_not_use_it
 
   setup:
       name:
