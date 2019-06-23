@@ -13,10 +13,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![Build Status](https://travis-ci.org/Okty-io/okty-config.svg?branch=master)](https://travis-ci.org/Okty-io/okty-config.svg)
-![Dependencies](https://david-dm.org/lbassin/okty.svg)
+[![Build Status](https://travis-ci.org/Okty-io/okty-config.svg?branch=dev)](https://travis-ci.org/Okty-io/okty-config)
+![Dependencies](https://david-dm.org/okty-io/okty-config.svg)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-lightgrey.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 <p align="center">
   <a href="#what-is-okty">What is Okty ?</a> •
