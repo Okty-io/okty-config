@@ -11,10 +11,17 @@ chapters:
       - when_not_use_it
 
   setup:
-      name:
-        fr_FR: "Setup & Concepts"
-        en_US: "Setup & Concepts"
-      lessons:
-        - container_vm
-        - architecture
-        - installation
+    name:
+      fr_FR: "Setup & Concepts"
+      en_US: "Setup & Concepts"
+    lessons:
+      - container_vm
+      - architecture
+      - installation
+
+  fundamentals:
+    name:
+      fr_FR: "fondamentaux"
+      en_US: "Fundamentals"
+    lessons:
+      - core_commands
