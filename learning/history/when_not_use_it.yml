@@ -1,10 +1,10 @@
 id:
-  fr_FR: 81dd82fc-fb6c-496f-8c45-097274bcad69
-  en_US: d3e78fc8-4361-43b3-ba02-e6b7d5cc94cb
+  fr_FR: 75075914-01f4-4e11-ac2b-49d4997f86b5
+  en_US: 82ffa0a0-7599-41b4-a0d9-a88dfd3856d1
 
 name:
-  fr_FR: "Installation"
-  en_US: "Installation"
+  fr_FR: "Quand ne pas l'utiliser ?"
+  en_US: "When not to use docker ?"
 
 steps:
   - text:
@@ -30,4 +30,9 @@ steps:
   - text:
       fr_FR: step_05_fr
       en_US: step_05_en
+    action: ~
+
+  - text:
+      fr_FR: step_06_fr
+      en_US: step_06_en
     action: ~
