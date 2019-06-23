@@ -15,7 +15,6 @@ chapters:
         fr_FR: "Setup & Concepts"
         en_US: "Setup & Concepts"
       lessons:
-        - definition
         - container_vm
-        - engine
+        - architecture
         - installation

@@ -11,3 +11,8 @@ steps:
       fr_FR: step_01_fr
       en_US: step_01_en
     action: ~
+
+  - text:
+      fr_FR: step_02_fr
+      en_US: step_02_en
+    action: ~
