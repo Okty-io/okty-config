@@ -1,0 +1,3 @@
+docker:
+  image: 'httpd'
+  tag: '2.4'

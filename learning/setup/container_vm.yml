@@ -1,0 +1,13 @@
+id:
+  fr_FR: 3a3537f8-417d-49b7-ad08-254004decccf
+  en_US: 7424a903-6fa8-45d4-b983-37c8cf1ac1f6
+
+name:
+  fr_FR: "Container & VM"
+  en_US: "Container & VM"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~
