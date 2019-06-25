@@ -9,6 +9,7 @@ chapters:
       - for_whom
       - when_to_use_it
       - when_not_to_use_it
+      - quizz
 
   setup:
     name:

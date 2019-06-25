@@ -1,0 +1,256 @@
+id:
+    fr_FR: 033e0f63-2054-4171-af4a-428eb8430ea2
+    en_US: e9fdea79-2099-40fa-b56d-276fd7d3e8f6
+
+name:
+    fr_FR: "Quizz"
+    en_US: "Quizz"
+
+steps:
+    -   text:
+            fr_FR: step_01_fr
+            en_US: step_01_en
+        action:
+            type: qcm
+            config:
+                questions:
+                    -   title:
+                            fr_FR: "Who started Docker ?"
+                            en_US: "Who started Docker ?"
+                        questions:
+                            fr_FR:
+                                - "Andrea Luzzardi"
+                                - "Francois-Xavier Bourlet"
+                                - "Solomon Hykes"
+                                - "Linus Torvalds"
+                            en_US:
+                                - "Andrea Luzzardi"
+                                - "Francois-Xavier Bourlet"
+                                - "Solomon Hykes"
+                                - "Linus Torvalds"
+                        responses: [1] # TODO
+
+                    -   title:
+                            fr_FR: "What Docker helps you with ?"
+                            en_US: "What Docker helps you with ?"
+                        questions:
+                            fr_FR:
+                                - 'Creating applications'
+                                - 'Running applications'
+                                - 'Deploying applications'
+                                - 'Monitoring applications'
+                            en_US:
+                                - 'Creating applications'
+                                - 'Running applications'
+                                - 'Deploying applications'
+                                - 'Monitoring applications'
+                        response: [1, 2] # TODO
+
+                    -   title:
+                            fr_FR: "Docker is part of ... (choose the answer that best applies)"
+                            en_US: "Docker is part of ... (choose the answer that best applies)"
+                        questions:
+                            fr_FR:
+                                - 'Agile culture'
+                                - 'Craft culture'
+                                - 'DevOps culture'
+                                - 'Rest APIs'
+                            en_US:
+                                - 'Agile culture'
+                                - 'Craft culture'
+                                - 'DevOps culture'
+                                - 'Rest APIs'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "Your company has a legacy monolithic application, what would you most likely use to run it ?"
+                            en_US: "Your company has a legacy monolithic application, what would you most likely use to run it ?"
+                        questions:
+                            fr_FR:
+                                - 'A remote desktop'
+                                - 'A virtual machine'
+                                - 'A docker container'
+                                - 'Answer D'
+                            en_US:
+                                - 'A remote desktop'
+                                - 'A virtual machine'
+                                - 'A docker container'
+                                - 'Answer D'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "What is 'App Isolation' ?"
+                            en_US: "What is 'App Isolation' ?"
+                        questions:
+                            fr_FR:
+                                - 'Encrypting data of an App'
+                                - 'Having middlewares on different containers'
+                                - 'An App running on a private network'
+                                - 'Separating components of an application into different containers'
+                            en_US:
+                                - 'Encrypting data of an App'
+                                - 'Having middlewares on different containers'
+                                - 'An App running on a private network'
+                                - 'Separating components of an application into different containers'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "Docker is ... and ... resource heavy than VMs"
+                            en_US: "Docker is ... and ... resource heavy than VMs"
+                        questions:
+                            fr_FR:
+                                - 'Heavier ;  less'
+                                - 'Faster ; less'
+                                - 'Better ; more'
+                                - 'Stronger ; more'
+                            en_US:
+                                - 'Heavier ;  less'
+                                - 'Faster ; less'
+                                - 'Better ; more'
+                                - 'Stronger ; more'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "How many main components of the docker architecture are there ?"
+                            en_US: "How many main components of the docker architecture are there ?"
+                        questions:
+                            fr_FR:
+                                - '1'
+                                - '2'
+                                - '3'
+                                - '4'
+                            en_US:
+                                - '1'
+                                - '2'
+                                - '3'
+                                - '4'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "On what architecture is Docker based on ?"
+                            en_US: "On what architecture is Docker based on ?"
+                        questions:
+                            fr_FR:
+                                - 'Microservice'
+                                - 'API Rest'
+                                - 'Client / Server'
+                                - 'Containers'
+                            en_US:
+                                - 'Microservice'
+                                - 'API Rest'
+                                - 'Client / Server'
+                                - 'Containers'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "What is the Docker Client for ?"
+                            en_US: "What is the Docker Client for ?"
+                        questions:
+                            fr_FR:
+                                - 'Interact with the Daemon'
+                                - 'Control the execution and life cycle of each of the containers'
+                                - 'Monitor container instances'
+                                - 'Control the Docker Engine'
+                            en_US:
+                                - 'Interact with the Daemon'
+                                - 'Control the execution and life cycle of each of the containers'
+                                - 'Monitor container instances'
+                                - 'Control the Docker Engine'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "Which one allows you to store your images locally ?"
+                            en_US: "Which one allows you to store your images locally ?"
+                        questions:
+                            fr_FR:
+                                - 'Containers'
+                                - 'Images'
+                                - 'Registry'
+                                - 'Docker Hub'
+                            en_US:
+                                - 'Containers'
+                                - 'Images'
+                                - 'Registry'
+                                - 'Docker Hub'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "Which version have we installed during this course ?"
+                            en_US: "Which version have we installed during this course ?"
+                        questions:
+                            fr_FR:
+                                - 'Enterprise Engine'
+                                - 'Community Edition'
+                                - 'Community Engine'
+                                - 'Enterprise Edition'
+                            en_US:
+                                - 'Enterprise Engine'
+                                - 'Community Edition'
+                                - 'Community Engine'
+                                - 'Enterprise Edition'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "What docker command runs a command in a run-time container ?"
+                            en_US: "What docker command runs a command in a run-time container ?"
+                        questions:
+                            fr_FR:
+                                - 'Docker run'
+                                - 'Docker start'
+                                - 'Docker exec'
+                                - 'Docker build'
+                            en_US:
+                                - 'Docker run'
+                                - 'Docker start'
+                                - 'Docker exec'
+                                - 'Docker build'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "How do you get access to a container’s Web Server default web page ?"
+                            en_US: "How do you get access to a container’s Web Server default web page ?"
+                        questions:
+                            fr_FR:
+                                - 'Getting into the container through SSH'
+                                - 'Using “docker search” command'
+                                - 'Sharing volumes between your container and the local machine'
+                                - 'Binding the web port of the container to your local machine'
+                            en_US:
+                                - 'Getting into the container through SSH'
+                                - 'Using “docker search” command'
+                                - 'Sharing volumes between your container and the local machine'
+                                - 'Binding the web port of the container to your local machine'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "Which docker command gives you logs of a container ?"
+                            en_US: "Which docker command gives you logs of a container ?"
+                        questions:
+                            fr_FR:
+                                - 'Docker logs <id>'
+                                - 'Docker get logs <id>'
+                                - 'Docker info <id>'
+                                - 'Docker get <id>'
+                            en_US:
+                                - 'Docker logs <id>'
+                                - 'Docker get logs <id>'
+                                - 'Docker info <id>'
+                                - 'Docker get <id>'
+                        response: [1] # TODO
+
+                    -   title:
+                            fr_FR: "What “-i” argument on a docker command stands for ?"
+                            en_US: "What “-i” argument on a docker command stands for ?"
+                        questions:
+                            fr_FR:
+                                - 'Initial'
+                                - 'Integrated'
+                                - 'Ingress'
+                                - 'Interactive'
+                            en_US:
+                                - 'Initial'
+                                - 'Integrated'
+                                - 'Ingress'
+                                - 'Interactive'
+                        response: [1] # TODO
+
