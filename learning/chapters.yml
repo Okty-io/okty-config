@@ -6,14 +6,22 @@ chapters:
     lessons:
       - history
       - what_is_it
-      - for_who_and_why
+      - for_whom
+      - when_to_use_it
+      - when_not_to_use_it
 
   setup:
-      name:
-        fr_FR: "Setup & Concepts"
-        en_US: "Setup & Concepts"
-      lessons:
-        - definition
-        - container_vm
-        - engine
-        - installation
+    name:
+      fr_FR: "Setup & Concepts"
+      en_US: "Setup & Concepts"
+    lessons:
+      - container_vm
+      - architecture
+      - installation
+
+  fundamentals:
+    name:
+      fr_FR: "fondamentaux"
+      en_US: "Fundamentals"
+    lessons:
+      - core_commands

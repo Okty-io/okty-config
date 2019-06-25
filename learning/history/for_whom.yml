@@ -1,0 +1,13 @@
+id:
+  fr_FR: fbce23eb-317b-4a4e-9196-c9cb6812ebed
+  en_US: 19d96803-5d82-4290-ab83-b8a24daf4efc
+
+name:
+  fr_FR: "Pour qui ?"
+  en_US: "For whom ?"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~

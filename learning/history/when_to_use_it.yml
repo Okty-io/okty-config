@@ -3,8 +3,8 @@ id:
   en_US: 82ffa0a0-7599-41b4-a0d9-a88dfd3856d1
 
 name:
-  fr_FR: "Pour qui et pourquoi ?"
-  en_US: "For who and why ?"
+  fr_FR: "Quand l'utiliser ?"
+  en_US: "When to use docker ?"
 
 steps:
   - text:
@@ -20,4 +20,14 @@ steps:
   - text:
       fr_FR: step_03_fr
       en_US: step_03_en
+    action: ~
+
+  - text:
+      fr_FR: step_04_fr
+      en_US: step_04_en
+    action: ~
+
+  - text:
+      fr_FR: step_05_fr
+      en_US: step_05_en
     action: ~

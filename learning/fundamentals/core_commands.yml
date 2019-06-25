@@ -1,0 +1,13 @@
+id:
+  fr_FR: 97e15064-967b-4c64-b170-4f3642feef2d
+  en_US: dcd88f77-e431-4a50-87d3-dc18ce24b3be
+
+name:
+  fr_FR: "Commandes Docker principales"
+  en_US: "Core Docker commands"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~
