@@ -11,9 +11,7 @@ script:
 
 before_deploy:
     - docker build -t python-aws -f deploy/Dockerfile .
-    - if [ "$TRAVIS_BRANCH" == "dev" ]; then $REDIS_URL = $REDIS_URL_DEV; fi
-    - if [ "$TRAVIS_BRANCH" == "master" ]; then $REDIS_URL = $REDIS_URL_PROD; fi
-    - docker run redis redis-cli -u $REDIS_URL flushall
+    - docker run redis redis-cli -u $REDIS_URL_PROD flushall
 
 deploy:
     provider: script
