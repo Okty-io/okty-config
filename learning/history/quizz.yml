@@ -44,7 +44,7 @@ steps:
                                 - 'Running applications'
                                 - 'Deploying applications'
                                 - 'Monitoring applications'
-                        response: [1, 2] # TODO
+                        responses: [1, 2] # TODO
 
                     -   title:
                             fr_FR: "Docker is part of ... (choose the answer that best applies)"
@@ -60,7 +60,7 @@ steps:
                                 - 'Craft culture'
                                 - 'DevOps culture'
                                 - 'Rest APIs'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "Your company has a legacy monolithic application, what would you most likely use to run it ?"
@@ -76,7 +76,7 @@ steps:
                                 - 'A virtual machine'
                                 - 'A docker container'
                                 - 'Answer D'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "What is 'App Isolation' ?"
@@ -92,7 +92,7 @@ steps:
                                 - 'Having middlewares on different containers'
                                 - 'An App running on a private network'
                                 - 'Separating components of an application into different containers'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "Docker is ... and ... resource heavy than VMs"
@@ -108,7 +108,7 @@ steps:
                                 - 'Faster ; less'
                                 - 'Better ; more'
                                 - 'Stronger ; more'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "How many main components of the docker architecture are there ?"
@@ -124,7 +124,7 @@ steps:
                                 - '2'
                                 - '3'
                                 - '4'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "On what architecture is Docker based on ?"
@@ -140,7 +140,7 @@ steps:
                                 - 'API Rest'
                                 - 'Client / Server'
                                 - 'Containers'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "What is the Docker Client for ?"
@@ -156,7 +156,7 @@ steps:
                                 - 'Control the execution and life cycle of each of the containers'
                                 - 'Monitor container instances'
                                 - 'Control the Docker Engine'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "Which one allows you to store your images locally ?"
@@ -172,7 +172,7 @@ steps:
                                 - 'Images'
                                 - 'Registry'
                                 - 'Docker Hub'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "Which version have we installed during this course ?"
@@ -188,7 +188,7 @@ steps:
                                 - 'Community Edition'
                                 - 'Community Engine'
                                 - 'Enterprise Edition'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "What docker command runs a command in a run-time container ?"
@@ -204,7 +204,7 @@ steps:
                                 - 'Docker start'
                                 - 'Docker exec'
                                 - 'Docker build'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "How do you get access to a container’s Web Server default web page ?"
@@ -220,7 +220,7 @@ steps:
                                 - 'Using “docker search” command'
                                 - 'Sharing volumes between your container and the local machine'
                                 - 'Binding the web port of the container to your local machine'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "Which docker command gives you logs of a container ?"
@@ -236,7 +236,7 @@ steps:
                                 - 'Docker get logs <id>'
                                 - 'Docker info <id>'
                                 - 'Docker get <id>'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
                     -   title:
                             fr_FR: "What “-i” argument on a docker command stands for ?"
@@ -252,5 +252,5 @@ steps:
                                 - 'Integrated'
                                 - 'Ingress'
                                 - 'Interactive'
-                        response: [1] # TODO
+                        responses: [1] # TODO
 
