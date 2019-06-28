@@ -93,7 +93,13 @@ steps:
                                 - 'An App running on a private network'
                                 - 'Separating components of an application into different containers'
                         responses: [1] # TODO
-
+    -   text:
+            fr_FR: step_02_fr
+            en_US: step_02_en
+        action:
+            type: qcm
+            config:
+                questions:
                     -   title:
                             fr_FR: "Docker is ... and ... resource heavy than VMs"
                             en_US: "Docker is ... and ... resource heavy than VMs"
@@ -173,7 +179,13 @@ steps:
                                 - 'Registry'
                                 - 'Docker Hub'
                         responses: [1] # TODO
-
+    -   text:
+            fr_FR: step_03_fr
+            en_US: step_03_en
+        action:
+            type: qcm
+            config:
+                questions:
                     -   title:
                             fr_FR: "Which version have we installed during this course ?"
                             en_US: "Which version have we installed during this course ?"
