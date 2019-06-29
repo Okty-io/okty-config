@@ -1,0 +1,16 @@
+name: Name
+logo: Logo
+config:
+    -
+        id: group_0
+        label: Général
+        fields:
+            -
+                id: name
+                label: 'Container ID'
+                type: input
+                destination: id
+                value: node
+                base: ''
+                validators: {  }
+                source: {  }
