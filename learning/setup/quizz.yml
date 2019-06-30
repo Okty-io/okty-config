@@ -1,0 +1,143 @@
+id:
+    fr_FR: 033e0f63-2054-4171-af4a-428eb8430ea2
+    en_US: e9fdea79-2099-40fa-b56d-276fd7d3e8f6
+
+name:
+    fr_FR: "Quizz"
+    en_US: "Quizz"
+
+steps:
+    -   text:
+            fr_FR: step_01_fr
+            en_US: step_01_en
+        action:
+            type: qcm
+            config:
+                questions:
+                    -   title:
+                            fr_FR: "Ta société a une application monolithique, quel techno est la plus optimisée pour la faire tourner ? "
+                            en_US: "Your company has a legacy monolithic application, what would you most likely use to run it ?"
+                        questions:
+                            fr_FR:
+                                - 'Un pc à distance'
+                                - 'Une machine virtuelle'
+                                - 'Un conteneur Docker'
+                                - 'Un image'
+                            en_US:
+                                - 'A remote desktop'
+                                - 'A virtual machine'
+                                - 'A docker container'
+                                - 'An image'
+                        responses: [2]
+
+                    -   title:
+                            fr_FR: "Qu'est-ce que l' \"Isolation Applicative\"  ?"
+                            en_US: "What is 'App Isolation' ?"
+                        questions:
+                            fr_FR:
+                                - "Encrypter les données de l'application"
+                                - 'Avoir middlewares sur des conteneurs différents'
+                                - 'Avoir une application qui tourne sur un réseau privé'
+                                - 'Séparer les composants applicatifs en plusieurs conteneurs'
+                            en_US:
+                                - 'Encrypting data of an App'
+                                - 'Having middlewares on different containers'
+                                - 'An App running on a private network'
+                                - 'Separating components of an application into different containers'
+                        responses: [4]
+
+                    -   title:
+                            fr_FR: "Docker est ... et ... lourd en ressource que les VMs"
+                            en_US: "Docker is ... and ... resource heavy than VMs"
+                        questions:
+                            fr_FR:
+                                - 'Lourd ;  moins'
+                                - 'Plus rapide ; moins'
+                                - 'Meilleur ; plus'
+                                - 'Fort ; plus'
+                            en_US:
+                                - 'Heavier ;  less'
+                                - 'Faster ; less'
+                                - 'Better ; more'
+                                - 'Stronger ; more'
+                        responses: [2]
+
+                    -   title:
+                            fr_FR: "Combien de composants principaux y a-t'il dans l'architecture Docker ?"
+                            en_US: "How many main components of the docker architecture are there ?"
+                        questions:
+                            fr_FR:
+                                - '1'
+                                - '2'
+                                - '3'
+                                - '4'
+                            en_US:
+                                - '1'
+                                - '2'
+                                - '3'
+                                - '4'
+                        responses: [2]
+
+                    -   title:
+                            fr_FR: "Sur quelle architecture Docker repose-t-il ?"
+                            en_US: "On what architecture is Docker based on ?"
+                        questions:
+                            fr_FR:
+                                - 'Microservice'
+                                - 'API Rest'
+                                - 'Client / Server'
+                                - 'Conteneurs'
+                            en_US:
+                                - 'Microservice'
+                                - 'API Rest'
+                                - 'Client / Server'
+                                - 'Containers'
+                        responses: [3]
+
+                    -   title:
+                            fr_FR: "A quoi sert le \"Client Docker\" ?"
+                            en_US: "What is the Docker Client for ?"
+                        questions:
+                            fr_FR:
+                                - 'Intéragir avec le Daemon'
+                                - "Contrôler l'exécution et le cycle de vie de chaque conteneur"
+                                - 'Monitorer les instances de conteneurs'
+                                - 'Contrôler le Moteur Docker'
+                            en_US:
+                                - 'Interact with the Daemon'
+                                - 'Control the execution and life cycle of each of the containers'
+                                - 'Monitor container instances'
+                                - 'Control the Docker Engine'
+                        responses: [1]
+
+                    -   title:
+                            fr_FR: "Lequel te permets d'enregistrer des images localement ?"
+                            en_US: "Which one allows you to store your images locally ?"
+                        questions:
+                            fr_FR:
+                                - 'Conteneurs'
+                                - 'Images'
+                                - 'Registry'
+                                - 'Docker Hub'
+                            en_US:
+                                - 'Containers'
+                                - 'Images'
+                                - 'Registry'
+                                - 'Docker Hub'
+                        responses: [3]
+
+                    -   title:
+                            fr_FR: "Quelle version avons-nous installé au cours du module ?"
+                            en_US: "Which version have we installed during this course ?"
+                        questions:
+                            fr_FR:
+                                - 'Enterprise Engine'
+                                - 'Community Edition'
+                                - 'Community Engine'
+                                - 'Enterprise Edition'
+                            en_US:
+                                - 'Enterprise Engine'
+                                - 'Community Edition'
+                                - 'Community Engine'
+                                - 'Enterprise Edition'
+                        responses: [3]

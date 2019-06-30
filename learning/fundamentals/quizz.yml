@@ -1,0 +1,80 @@
+id:
+    fr_FR: 033e0f63-2054-4171-af4a-428eb8430ea2
+    en_US: e9fdea79-2099-40fa-b56d-276fd7d3e8f6
+
+name:
+    fr_FR: "Quizz"
+    en_US: "Quizz"
+
+steps:
+    -   text:
+            fr_FR: step_01_fr
+            en_US: step_01_en
+        action:
+            type: qcm
+            config:
+                questions:
+                    -   title:
+                            fr_FR: "Quelle commande Docker permet d'exécuter une commande sur un conteneur qui tourne ?"
+                            en_US: "What docker command runs a command in a run-time container ?"
+                        questions:
+                            fr_FR:
+                                - 'Docker run'
+                                - 'Docker start'
+                                - 'Docker exec'
+                                - 'Docker build'
+                            en_US:
+                                - 'Docker run'
+                                - 'Docker start'
+                                - 'Docker exec'
+                                - 'Docker build'
+                        responses: [3]
+
+                    -   title:
+                            fr_FR: "Comment est-ce que tu accèdes à la page par défaut du Web Serveur sur un conteneur ?"
+                            en_US: "How do you get access to a container’s Web Server default web page ?"
+                        questions:
+                            fr_FR:
+                                - 'En me connectant au conteneur en SSH'
+                                - 'En utilisant la commande "docker search"'
+                                - 'En partageant des volumes entre le conteneur et ta machine'
+                                - 'En bindant le port du conteneur au port de ta machine'
+                            en_US:
+                                - 'Getting into the container through SSH'
+                                - 'Using “docker search” command'
+                                - 'Sharing volumes between your container and the local machine'
+                                - 'Binding the web port of the container to your local machine'
+                        responses: [4]
+
+                    -   title:
+                            fr_FR: "Quelle commande Docker te permet d'avoir les logs d'un conteneur?"
+                            en_US: "Which docker command gives you logs of a container ?"
+                        questions:
+                            fr_FR:
+                                - 'Docker logs <id>'
+                                - 'Docker get logs <id>'
+                                - 'Docker info <id>'
+                                - 'Docker get <id>'
+                            en_US:
+                                - 'Docker logs <id>'
+                                - 'Docker get logs <id>'
+                                - 'Docker info <id>'
+                                - 'Docker get <id>'
+                        responses: [1]
+
+                    -   title:
+                            fr_FR: "A quoi correspond l'argument \"-i\" d'une commande Docker ?"
+                            en_US: "What “-i” argument on a docker command stands for ?"
+                        questions:
+                            fr_FR:
+                                - 'Initial'
+                                - 'Integrated'
+                                - 'Ingress'
+                                - 'Interactive'
+                            en_US:
+                                - 'Initial'
+                                - 'Integrated'
+                                - 'Ingress'
+                                - 'Interactive'
+                        responses: [4]
+
