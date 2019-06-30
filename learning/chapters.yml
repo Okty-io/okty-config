@@ -19,6 +19,7 @@ chapters:
       - container_vm
       - architecture
       - installation
+      - quizz
 
   fundamentals:
     name:
@@ -26,3 +27,4 @@ chapters:
       en_US: "Fundamentals"
     lessons:
       - core_commands
+      - quizz
