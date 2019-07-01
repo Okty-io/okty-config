@@ -1,3 +1,0 @@
-docker:
-    image: lbassin/node-express
-    tag: latest
