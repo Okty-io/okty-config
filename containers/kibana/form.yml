@@ -1,5 +1,5 @@
 name: 'Kibana'
-logo: 'https://static-www.elastic.co/assets/blt282ae2420e32fc38/icon-kibana-bb.svg'
+logo: 'https://cdn.worldvectorlogo.com/logos/elastic-kibana.svg'
 config:
   - id: general
     label: General
