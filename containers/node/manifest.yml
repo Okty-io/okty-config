@@ -1,0 +1,3 @@
+docker:
+    image: node
+    tag: latest
