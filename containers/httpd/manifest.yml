@@ -1,0 +1,3 @@
+docker:
+    image: httpd
+    tag: alpine

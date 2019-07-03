@@ -1,0 +1,25 @@
+name: httpd
+logo: 'https://google.fr/'
+config:
+    -
+        id: group_0
+        label: Général
+        fields:
+            -
+                id: name
+                label: 'Container ID'
+                type: input
+                destination: id
+                value: httpd
+                base: ''
+                validators: {  }
+                source: {  }
+            -
+                label: versionalpine
+                destination: version
+                type: select-single
+                base: ''
+                source:
+                    - latest
+                value: latest
+                id: versionalpine
