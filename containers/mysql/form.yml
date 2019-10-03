@@ -31,7 +31,7 @@ config:
           '8': '8'
         base: image
         destination: version
-        value: latest
+        value: '5.7'
         validators:
           required: true
   - id: connection
