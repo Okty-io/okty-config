@@ -37,7 +37,7 @@ config:
             '6.4.3': '6.4.3'
           base: image
           destination: version
-          value: '10.3'
+          value: '7.4.1'
           validators:
             required: true
       - id: port_api
