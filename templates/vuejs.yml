@@ -1,0 +1,11 @@
+name: 'Vue.JS'
+logo: 'https://vuejs.org/images/logo.png'
+containers:
+    -   image: 'nodejs'
+        config:
+            general_name: 'nodejs'
+            general_image: 'latest'
+            general_application: './'
+            general_workingdir: '/home/node/app'
+            entrypoint_port: 8080
+            entrypoint_command: 'npm install && ./node_modules/.bin/vue-cli-service serve'
