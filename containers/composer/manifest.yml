@@ -1,0 +1,3 @@
+docker:
+  image: 'composer'
+  tag: '1.8'

@@ -1,0 +1,1 @@
+For your information there are 2 versions of Docker : Community Engine Edition & Enterprise Engine Edition. For our use during this course we’ll be using Docker Community Engine Edition (CE). For more information about the EE version please follow the link below. https://docs.docker.com/install/overview/

@@ -1,0 +1,63 @@
+id:
+    fr_FR: 033e0f63-2054-4171-af4a-428eb8430ea2
+    en_US: e9fdea79-2099-40fa-b56d-276fd7d3e8f6
+
+name:
+    fr_FR: "Quizz"
+    en_US: "Quizz"
+
+steps:
+    -   text:
+            fr_FR: step_01_fr
+            en_US: step_01_en
+        action:
+            type: qcm
+            config:
+                questions:
+                    -   title:
+                            fr_FR: "Qui a lancé le projet Docker ?"
+                            en_US: "Who started Docker ?"
+                        questions:
+                            fr_FR:
+                                - "Andrea Luzzardi"
+                                - "Francois-Xavier Bourlet"
+                                - "Solomon Hykes"
+                                - "Linus Torvalds"
+                            en_US:
+                                - "Andrea Luzzardi"
+                                - "Francois-Xavier Bourlet"
+                                - "Solomon Hykes"
+                                - "Linus Torvalds"
+                        responses: [3]
+
+                    -   title:
+                            fr_FR: "Qu'est-ce que Docker permet de faire ?"
+                            en_US: "What Docker helps you with ?"
+                        questions:
+                            fr_FR:
+                                - 'Créer des applications'
+                                - 'Faire tourner des applications'
+                                - 'Déployer des applications'
+                                - 'Monitorer des applications'
+                            en_US:
+                                - 'Creating applications'
+                                - 'Running applications'
+                                - 'Deploying applications'
+                                - 'Monitoring applications'
+                        responses: [1, 2, 3]
+
+                    -   title:
+                            fr_FR: "Docker fait partie de ... (choisi la réponse qui correspond le plus)"
+                            en_US: "Docker is part of ... (choose the answer that best applies)"
+                        questions:
+                            fr_FR:
+                                - 'Culture Agile'
+                                - 'Culture Craft'
+                                - 'Culture DevOps'
+                                - 'Rest APIs'
+                            en_US:
+                                - 'Agile culture'
+                                - 'Craft culture'
+                                - 'DevOps culture'
+                                - 'Rest APIs'
+                        responses: [3]

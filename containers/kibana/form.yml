@@ -1,0 +1,32 @@
+name: 'Kibana'
+logo: 'https://cdn.worldvectorlogo.com/logos/elastic-kibana.svg'
+config:
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: 'Container ID'
+        type: input
+        base: container_id
+        destination: id
+        value: kibana
+        validators:
+          required: true
+          regex: '^[a-z]+(-)?[a-z]+$'
+      - id: port
+        label: 'Port used on the host machine'
+        type: input
+        base: '5601'
+        destination: ports
+        value: '5601'
+        validators:
+          required: true
+          numbers: { min: 0, max: 65535 }
+      - id: elastic_host
+        label: 'Url of Elasticsearch host'
+        type: input
+        base: ELASTICSEARCH_HOSTS
+        destination: environments
+        value: 'http://elasticsearch:9200'
+        validators:
+          required: true

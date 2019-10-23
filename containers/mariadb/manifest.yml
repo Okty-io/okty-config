@@ -1,0 +1,3 @@
+docker:
+  image: 'mariadb'
+  tag: '10.3'

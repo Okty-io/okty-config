@@ -1,0 +1,18 @@
+id:
+  fr_FR: be75200f-36ee-4690-b749-309eb324550a
+  en_US: 257e868e-285f-4530-9aab-5a7415d39bb9
+
+name:
+  fr_FR: "Docker Engine"
+  en_US: "Docker Engine"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~
+
+  - text:
+      fr_FR: step_02_fr
+      en_US: step_02_en
+    action: ~

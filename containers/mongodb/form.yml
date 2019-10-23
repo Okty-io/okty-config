@@ -1,0 +1,50 @@
+name: 'MongoDB'
+logo: 'https://cdn.worldvectorlogo.com/logos/mongodb.svg'
+config:
+  - id: general
+    label: General
+    fields:
+      - id: name
+        label: 'Container ID'
+        type: input
+        base: container_id
+        destination: id
+        value: mongo
+        validators:
+          required: true
+          regex: '^[a-z]+(-)?[a-z]+$'
+      - id: port
+        label: 'Port used on the host machine'
+        type: input
+        base: '27017'
+        destination: ports
+        value: ''
+        validators:
+          numbers: { min: 0, max: 65535 }
+  - id: connection
+    label: Connection
+    fields:
+      - id: database_name
+        label: 'Database Name'
+        type: input
+        base: MONGO_INITDB_DATABASE
+        destination: environments
+        value: 'docker'
+        validators:
+          required: true
+      - id: database_user
+        label: 'User'
+        type: input
+        base: MONGO_INITDB_ROOT_USERNAME
+        destination: environments
+        value: 'user'
+        validators:
+          required: true
+      - id: database_password
+        label: 'Password'
+        type: input
+        base: MONGO_INITDB_ROOT_PASSWORD
+        destination: environments
+        value: 'password'
+        validators:
+          required: true

@@ -1,0 +1,18 @@
+id:
+  fr_FR: 057146cf-f7c4-4478-9ca0-f4944890e9d6
+  en_US: 30d23927-b10c-405e-b0cf-5d6a84950db6
+
+name:
+  fr_FR: "Qu'est ce que c'est ?"
+  en_US: "What is it ?"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~
+
+  - text:
+      fr_FR: step_02_fr
+      en_US: step_02_en
+    action: ~

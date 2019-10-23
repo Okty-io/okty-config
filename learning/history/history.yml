@@ -1,0 +1,18 @@
+id:
+  fr_FR: 6657b341-ace7-4384-96fa-70fc1a28112f
+  en_US: 5408fd92-db03-4d2f-952a-490f154d76b3
+
+name:
+  fr_FR: "Historique"
+  en_US: "History"
+
+steps:
+  - text:
+      fr_FR: step_01_fr
+      en_US: step_01_en
+    action: ~
+
+  - text:
+      fr_FR: step_02_fr
+      en_US: step_02_en
+    action: ~

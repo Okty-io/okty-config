@@ -1,0 +1,30 @@
+chapters:
+  history:
+    name:
+      fr_FR: "Historique"
+      en_US: "History"
+    lessons:
+      - history
+      - what_is_it
+      - for_whom
+      - when_to_use_it
+      - when_not_to_use_it
+      - quizz
+
+  setup:
+    name:
+      fr_FR: "Setup & Concepts"
+      en_US: "Setup & Concepts"
+    lessons:
+      - container_vm
+      - architecture
+      - installation
+      - quizz
+
+  fundamentals:
+    name:
+      fr_FR: "fondamentaux"
+      en_US: "Fundamentals"
+    lessons:
+      - core_commands
+      - quizz

@@ -1,0 +1,11 @@
+name: 'Angular'
+logo: 'https://angular.io/assets/images/logos/angular/angular.png'
+containers:
+    -   image: 'nodejs'
+        config:
+            general_name: 'nodejs'
+            general_image: 'latest'
+            general_application: './'
+            general_workingdir: '/home/node/app'
+            entrypoint_port: 4200
+            entrypoint_command: 'npm install && ./node_modules/.bin/ng serve --host 0.0.0.0'

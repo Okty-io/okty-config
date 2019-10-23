@@ -1,0 +1,10 @@
+docker:
+  build: 'docker/php'
+files:
+  - Dockerfile
+config:
+  Dockerfile:
+    output: docker/php
+    args:
+      php_extensions:
+        default: ''

@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <a href="https://okty.io/">
-    <img src="https://i.imgur.com/kN8SThu.png" alt="Okty" height="200">
+    <img src="https://cdn.worldvectorlogo.com/logos/okty-1.svg" alt="Okty" height="200">
   </a>
   <br>
   Okty - Configuration
@@ -13,10 +13,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![Build Status](https://travis-ci.org/lbassin/okty.svg?branch=master)](https://travis-ci.org/lbassin/okty) 
-![Dependencies](https://david-dm.org/lbassin/okty.svg)
+[![Build Status](https://travis-ci.org/Okty-io/okty-config.svg?branch=dev)](https://travis-ci.org/Okty-io/okty-config)
+![Dependencies](https://david-dm.org/okty-io/okty-config.svg)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-lightgrey.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 <p align="center">
   <a href="#what-is-okty">What is Okty ?</a> •
@@ -192,8 +192,13 @@ If something is missing or broken, feel free to open an issue or made a pull req
 Maybe the container you want isn't available ? 
 Make your own or ask for it on through pull requests or issues !
 
+## Contributors
+
+| [<img src="https://avatars1.githubusercontent.com/u/13522273?s=460&v=4" width="100px;"/><br /><sub><b>Mapsred</b></sub>](https://github.com/Mapsred) | [<img src="https://avatars0.githubusercontent.com/u/17589926?s=460&v=4" width="100px;"/><br /><sub><b>agranjeon</b></sub>](https://github.com/agranjeon) | [<img src="https://avatars2.githubusercontent.com/u/734582?s=460&v=4" width="100px;"/><br /><sub><b>orions</b></sub>](https://github.com/orions) | [<img src="https://avatars0.githubusercontent.com/u/3369266?s=460&v=4" width="100px;"/><br /><sub><b>Pierstoval</b></sub>](https://github.com/Pierstoval) | [<img src="https://avatars0.githubusercontent.com/u/7290607?s=400&v=4" width="100px;"/><br /><sub><b>kmarques</b></sub>](https://github.com/kmarques)
+| :---: | :---: | :---: | :---: | :---: |
+
 ## License
-Okty is made available under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+Okty is made available under the [GNU GPL v3 License](https://opensource.org/licenses/GPL-3.0).
 
 ## Credits
 Okty is created and maintained by

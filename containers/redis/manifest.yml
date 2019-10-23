@@ -1,0 +1,3 @@
+docker:
+  image: redis
+  tag: 5.0.4

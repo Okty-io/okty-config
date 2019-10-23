@@ -1,0 +1,18 @@
+docker:
+  build: 'docker/nginx'
+files:
+  - Dockerfile
+  - default.conf
+config:
+  Dockerfile:
+    output: docker/nginx
+  default.conf:
+    output: docker/nginx
+    args:
+      root_folder:
+        default: ''
+      max_upload_size:
+        default: '2M'
+      php_container_link:
+        default: ''
+                

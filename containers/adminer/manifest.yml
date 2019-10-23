@@ -1,0 +1,3 @@
+docker:
+  image: 'adminer'
+  tag: '4.7'
