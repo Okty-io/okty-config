@@ -21,6 +21,25 @@ config:
         value: './elasticdata'
         validators:
           required: true
+      - id: image
+          label: 'Version'
+          type: 'select-single'
+          source:
+            '7.4.1': '7.4.1'
+            '7.3.2': '7.3.2'
+            '7.2.1': '7.2.1'
+            '7.1.1': '7.1.1'
+            '7.0.1': '7.0.1'
+            '6.8.4': '6.8.4'
+            '6.7.2': '6.7.2'
+            '6.6.2': '6.6.2'
+            '6.5.4': '6.5.4'
+            '6.4.3': '6.4.3'
+          base: image
+          destination: version
+          value: '7.4.1'
+          validators:
+            required: true
       - id: port_api
         label: 'Elasticsearch port used by Rest API'
         type: input
