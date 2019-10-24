@@ -1,51 +1,51 @@
 name: 'Kibana'
 logo: 'https://cdn.worldvectorlogo.com/logos/elastic-kibana.svg'
 config:
-  - id: general
-    label: General
-    fields:
-      - id: name
-        label: 'Container ID'
-        type: input
-        base: container_id
-        destination: id
-        value: kibana
-        validators:
-          required: true
-          regex: '^[a-z]+(-)?[a-z]+$'
-      - id: image
-          label: 'Version'
-          type: 'select-single'
-          source:
-            '7.4.1': '7.4.1'
-            '7.3.2': '7.3.2'
-            '7.2.1': '7.2.1'
-            '7.1.1': '7.1.1'
-            '7.0.1': '7.0.1'
-            '6.8.4': '6.8.4'
-            '6.7.2': '6.7.2'
-            '6.6.2': '6.6.2'
-            '6.5.4': '6.5.4'
-            '6.4.3': '6.4.3'
-          base: image
-          destination: version
-          value: '7.4.1'
-          validators:
-            required: true
-      - id: port
-        label: 'Port used on the host machine'
-        type: input
-        base: '5601'
-        destination: ports
-        value: '5601'
-        validators:
-          required: true
-          numbers: { min: 0, max: 65535 }
-      - id: elastic_host
-        label: 'Url of Elasticsearch host'
-        type: input
-        base: ELASTICSEARCH_HOSTS
-        destination: environments
-        value: 'http://elasticsearch:9200'
-        validators:
-          required: true
+    -   id: general
+        label: General
+        fields:
+            -   id: name
+                label: 'Container ID'
+                type: input
+                base: container_id
+                destination: id
+                value: kibana
+                validators:
+                    required: true
+                    regex: '^[a-z]+(-)?[a-z]+$'
+            -   id: image
+                label: 'Version'
+                type: 'select-single'
+                source:
+                    '7.4.1': '7.4.1'
+                    '7.3.2': '7.3.2'
+                    '7.2.1': '7.2.1'
+                    '7.1.1': '7.1.1'
+                    '7.0.1': '7.0.1'
+                    '6.8.4': '6.8.4'
+                    '6.7.2': '6.7.2'
+                    '6.6.2': '6.6.2'
+                    '6.5.4': '6.5.4'
+                    '6.4.3': '6.4.3'
+                base: image
+                destination: version
+                value: '7.4.1'
+                validators:
+                    required: true
+            -   id: port
+                label: 'Port used on the host machine'
+                type: input
+                base: '5601'
+                destination: ports
+                value: '5601'
+                validators:
+                    required: true
+                    numbers: { min: 0, max: 65535 }
+            -   id: elastic_host
+                label: 'Url of Elasticsearch host'
+                type: input
+                base: ELASTICSEARCH_HOSTS
+                destination: environments
+                value: 'http://elasticsearch:9200'
+                validators:
+                    required: true
