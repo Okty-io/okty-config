@@ -9,7 +9,7 @@ config:
         type: input
         base: container_id
         destination: id
-        value: adminer
+        value: apache
         validators:
           required: true
           regex: '^[a-z]+(-)?[a-z]+$'
