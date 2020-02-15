@@ -9,12 +9,15 @@ before_script:
 script:
     - docker run -v $PWD:/app -w /app node:11-alpine node ./deploy/tests/lint.js
 
+after_script:
+    - rm -rf ./node_modules
+
 before_deploy:
-    - docker build -t python-aws -f deploy/Dockerfile .
-    - docker run redis redis-cli -u $REDIS_URL_PROD flushall
+    - docker build -t aws-cli -f deploy/Dockerfile .
+    - docker run redis redis-cli -u $REDIS_URL_PROD FLUSHALL
 
 deploy:
     provider: script
-    script: docker run -v $PWD:/app -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY python-aws ./deploy/build.sh
+    script: docker run -v $PWD:/app -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY aws-cli ./deploy/build.sh
     on:
         branch: master
