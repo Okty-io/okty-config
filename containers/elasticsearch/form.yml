@@ -1,46 +1,65 @@
 name: 'Elasticsearch'
 logo: 'https://cdn.worldvectorlogo.com/logos/elasticsearch.svg'
 config:
-  - id: general
-    label: General
-    fields:
-      - id: name
-        label: 'Container ID'
-        type: input
-        base: container_id
-        destination: id
-        value: elasticsearch
-        validators:
-          required: true
-          regex: '^[a-z]+(-)?[a-z]+$'
-      - id: application
-        label: 'Local path of datastore folder'
-        type: input
-        base: '/usr/share/elasticsearch/data'
-        destination: volumes
-        value: './elasticdata'
-        validators:
-          required: true
-      - id: port_api
-        label: 'Elasticsearch port used by Rest API'
-        type: input
-        base: '9200'
-        destination: ports
-        value: ''
-        validators:
-          numbers: { min: 0, max: 65535 }
-      - id: port_node
-        label: 'Local port for node communication'
-        type: input
-        base: '9300'
-        destination: ports
-        value: ''
-        validators:
-          numbers: { min: 0, max: 65535 }
-      - id: env_mode
-        type: hidden
-        base: "discovery.type"
-        destination: environments
-        value: 'single-node'
-        validators:
-          required: true
+    -   id: general
+        label: General
+        fields:
+            -   id: name
+                label: 'Container ID'
+                type: input
+                base: container_id
+                destination: id
+                value: elasticsearch
+                validators:
+                    required: true
+                    regex: '^[a-z]+(-)?[a-z]+$'
+            -   id: application
+                label: 'Local path of datastore folder'
+                type: input
+                base: '/usr/share/elasticsearch/data'
+                destination: volumes
+                value: './elasticdata'
+                validators:
+                    required: true
+            -   id: image
+                label: 'Version'
+                type: 'select-single'
+                source:
+                    '7.4.1': '7.4.1'
+                    '7.3.2': '7.3.2'
+                    '7.2.1': '7.2.1'
+                    '7.1.1': '7.1.1'
+                    '7.0.1': '7.0.1'
+                    '6.8.4': '6.8.4'
+                    '6.7.2': '6.7.2'
+                    '6.6.2': '6.6.2'
+                    '6.5.4': '6.5.4'
+                    '6.4.3': '6.4.3'
+                base: image
+                destination: version
+                value: '7.4.1'
+                validators:
+                    required: true
+            -   id: port_api
+                label: 'Elasticsearch port used by Rest API'
+                type: input
+                base: '9200'
+                destination: ports
+                value: ''
+                validators:
+                    numbers: { min: 0, max: 65535 }
+            -   id: port_node
+                label: 'Local port for node communication'
+                type: input
+                base: '9300'
+                destination: ports
+                value: ''
+                validators:
+                    numbers: { min: 0, max: 65535 }
+            -   id: env_mode
+                type: hidden
+                base: "discovery.type"
+                destination: environments
+                value: 'single-node'
+                validators:
+                    required: true
