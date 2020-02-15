@@ -32,7 +32,7 @@ for container in *; do
         aws lambda create-function \
             --function-name ${container} \
             --zip-file fileb://resolvers.zip \
-            --runtime nodejs8.10 \
+            --runtime nodejs12.x \
             --handler handler.handle \
             --role arn:aws:iam::593664064329:role/lambda-travis \
             > /dev/null

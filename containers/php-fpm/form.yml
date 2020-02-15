@@ -19,7 +19,6 @@ config:
         destination: files
         base: php_version
         source:
-          '7.1-fpm': '7.1'
           '7.2-fpm': '7.2'
           '7.3-fpm': '7.3'
         validators:
