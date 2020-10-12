@@ -21,6 +21,7 @@ config:
         source:
           '7.2-fpm': '7.2'
           '7.3-fpm': '7.3'
+          '7.4-fpm': '7.4'
         validators:
           required: true
       - id: application
