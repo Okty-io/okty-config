@@ -18,6 +18,9 @@ config:
         type: 'select-single'
         source:
           'latest': 'latest'
+          '16': '16'
+          '14': '14'
+          '12': '12'
           '10': '10'
           '8': '8'
           'alpine': 'alpine'
